@@ -1,0 +1,7 @@
+-> In today's task first of all in the morning time i have seen 1:30 hr of youtube videos of basics of git & github for refer and basic knowledge and learned some basic command like add, push, clone, commit, merge, fetch, checkout, stage, status, touch, log and etc.. 
+-> I have completed the practice document repository of batman which is given by.
+-> In today's practice session i have faced many errors and bugs and learned to resolve it.
+-> That errors are branch merging "Please enter a commit message to explain why this merge is necessary" and get it resolved using some stackoverflow code
+-> Just because i have 2 ids of git that is why some issues created related to my previous login and usename of my college id which i have resolved it and changed the usename through "git config --global user.name username" command and for emailid "git config --global user.email emailid".
+-> After that i have attended the whole meeting and listened to all quetions and all solutions which is very helpful.
+-> After the metting i have create Cybercom public repository and created three folders Codding, Document and Prectice using terminal (gitbash) but it's genarated error "fail to push". Then i have search this error and i reliase that this error occure beacuse it has no file in it.so then i have created 2021-01-05.txt file and then perform add, Commit and push commands in my repository.
