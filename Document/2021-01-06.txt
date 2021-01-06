@@ -1,0 +1,7 @@
+->in today's task in the morning i have created another private repository and cloned to local machine for practicing purpose. in which i have used basic command for push,merge,branch,touch and try to pull from github using pull command.In the process i have faced some bugs but after it is resolved.
+->In the new demo repository i have tried to remove file at remote server with using git rm --cached [file.name]
+and git rm [file.name] and it worked.
+->After that i have seen some videos of more git commands and its uses and tried in the repositary.
+->After that i have attented the whole meeting and learned some command like revert,restore,log and its uses.
+->After meeting i have tried and run these commands in my private demo repository for checking its working nd when to use it.in a meantime some errors and bugs occured but get it resolved through research and try and error method.
+->Today i have learned some more commands and its working and also learned how to handle bugs and errors.
