@@ -1,0 +1,6 @@
+-> In today's task in the morning i have practiced the basic necessary commands add,commit and push in my private repository and create another branch for practice perpose and run merge command.
+->Then i have read more commands from git book on online and tried in my private repository to know how its works and practice from them.
+->Then again i tried git pull command to get code from github to my local machine i have faced some merge conflicts issues but then i resolved it latter.
+->After that i have created .gitignore file using touch .gitignore command and created one mylogs.log file to check that its working or not and created some other files and added this files on .gitignore file for practicing that its working or not and it worked properly.
+->After that i have attended the whole meeting and learned some new commands like rebase,revert,reset,git show,squash.
+->After that i have tried rebase command in my repository to know how its working and practiced rebase command and merged the two branches.  
