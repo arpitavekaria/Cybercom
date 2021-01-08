@@ -1,0 +1,6 @@
+->In today's task i have watched and learned from all today's practice videos of javascript.
+->Then i performed all coding challenges also tried to do some extra activity which is given by you and learned from it which is helpful.
+->After that i attended the meeting and during that i have learned the HTML basics and its properties.
+->Also learned and performed HTML tags like div,table,tr,td,tbody,thead,tfoot,rowspan,colspan,:nbsp;,br and other also.
+->Then i performed HTML practice task of boxes which is given by.
+->In meantime i am not getting same output as given so i googled and get learned from CSS and tried to resolved it.
