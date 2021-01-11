@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table 3</title>
+	<style type="text/css">
+		table {
+			border: solid rgba(200, 200, 200, 1.0) 5px;
+		}
+
+		th, td, th {
+			border: solid 1px;
+			padding: 2px;
+		}
+		
+		.center {
+			  margin-left: auto;
+			  margin-right: auto;
+		}
+
+		.txt-center {
+			text-align: center;
+		}
+
+		.txt-right {
+			text-align: right;
+		}
+
+		.txt-white {
+			color: white;
+		}
+
+		.txt-yellow {
+			color: #CDCD00;
+		}
+		.bg-red {
+			background-color: red;
+		}
+
+		.bg-green {
+			background-color: green;
+		}
+
+		.bg-som {
+			background-color: #ebe3ca;
+		}
+
+		.pd {
+			padding: 0 50px 0 12px;
+		}
+
+		.hd {
+			width: 30%;
+		}
+	</style>
+</head>
+<body>
+	<table class="center">
+		<tr>
+			<th>Heading 1</th>
+			<th>Heading 2</th>
+			<th class="hd">Heading 3</th>
+		</tr>
+		<tr>
+			<td class="txt-center" valign="top">Cell 1 text</td>
+			<td>cell 2 text A<br>cell 2 text B</td>
+			<td class="txt-center" valign="top">cell 3 text</td>
+		</tr>
+		<tr>
+			<td class="pd">a long piece of cell text on one line without a break</td>
+			<td><i>cell text</i></td>
+			<td class="txt-right">cell text aligned right</td>
+		</tr>
+		<tr>
+			<td class="txt-center"><b>cell text</b></td>
+			<td></td>
+			<td class="bg-som">graphic background</td>
+		</tr>
+		<tr>
+			<td colspan="3" class="txt-center"><b>Mid-table Heading</b></td>
+		</tr>
+		<tr>
+			<td>Things to do today</td>
+			<td rowspan="5" class="txt-center"><b>W<br>E<br>E<br>K<br><br>26</b></td>
+			<td>Monday</td>
+		</tr>
+		<tr>
+			<td class="bg-red">Things to do on Tuesday</td>
+			<td class="bg-red">Tuesday</td>
+		</tr>
+		<tr>
+			<td>Things to do today</td>
+			<td>Wednesday</td>			
+		</tr>
+		<tr>
+			<td class="txt-center bg-green txt-white">Things to do today</td>
+			<td class="bg-green txt-yellow">Thursday</td>
+		</tr>
+		<tr>
+			<td>Stuff to tidy up <b>before the weekend!!!</b></td>
+			<td>Friday</td>
+		</tr>
+	</table>
+</body>
+</html>
