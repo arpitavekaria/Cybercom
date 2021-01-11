@@ -1,0 +1,5 @@
+->In today's task i have watched and learned if else statement and array from all today's practice videos of javascript.
+->Then i performed all html and js coding challenges also tried to do some extra activity like 2nd challaged using switch case which is given by you and learned from it which is helpful.
+->After that i attended the meeting and during that i have learned the HTML Forms and its properties.
+->Also learned and performed from W3schools and with help of other websites and learned different form tags and tried different formats.
+->In meantime i am not getting same output as given so i googled and get learned from it and tried to resolved it.
