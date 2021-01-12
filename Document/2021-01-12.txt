@@ -1,0 +1,6 @@
+->In Today's task i watched and learned execution contexts,hoisting,scope and the scope chain,'this' keyword,object and its properties and methods,loop and iteration and different versions of javascript(ES5,ES6,etc..) from videos of javascript.
+-> Then after i performed some different examples of this, objects and loop to check its behaviour.
+-> Then after i compleated one HTML task of creating form.
+-> Then i attended the whole meeting and learn CSS and JS overview.
+-> Then i have compleate my other html and js task just for practice. In that i 
+-> After that also learned some diffrent tags and css properties.And also tried to resolved some bugs.
