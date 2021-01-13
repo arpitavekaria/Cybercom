@@ -1,0 +1,18 @@
+->Today i watched all videos and learned from it.
+-In today's video i learned DOM(document object model) manipulation, HTML and CSS overview, events and events handling and there is one little game is there to proper understand DOM access and manipulation.
+->Also learn some methods to select element from webpage like document.querySelector() and document.getElementById().
+->After that i learned some details and also tried to perform some method about local storage and session storage and its difference.
+	-setItem()
+	-getItem()
+	-clear()
+	-removeItem()
+
+--to store array values;
+	-setItem('mark',JSON.Stringyfy('imparray');
+
+--to get array values;
+	-name = JSON.parse(localstorage.getItem('mark'));
+
+->Then i performed today's js task which is given by.
+->After that i attend the meeting and grasp some more knowledge about local storage and session storage.
+->Then i performed HTML challanges which is given by in meantime i am not getting the output proper so i check on google and tried to solved it.
