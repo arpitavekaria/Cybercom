@@ -1,0 +1,12 @@
+->  Today i have recieved the all C# basic videos and watched today's video.
+->  Today i have learned how to create Console application.
+->  Also learned what is namespace and it includes another namespaces.
+->  Learned how to write using Console.WriteLine() and how to read using Console.ReadLine().
+->  Also C# is also Case sensitive.
+->  Today i have also learn Types like integral types,floting types,decimal,string..
+->  Also learned how it is use \n is for new line and write "\n" and if we use single \ then use the \\ in string.
+->  verbatim Literal(use @ before(prefix) the "").
+->  Then learn nulleble and null coalesce operator.
+->  Typecasat (convert float to int using typecast).
+->  Also learned Parse() and TryParse() for string to int convertion.
+->  And also learned comments in C# for Singleline, Multi line and XML Document Comment using (//,/* */,///).
