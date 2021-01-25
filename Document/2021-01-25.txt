@@ -1,0 +1,32 @@
+->In today task i have watched all today's video of c# basics.
+
+->i have learned 
+	if statement,
+	if else statement,
+	difference between && and &,
+	difference between || and |.
+
+->in next video i learned switch statements.
+	switch,break
+
+->in next video i leaned goto statement but it is better to avoid this statement in programming.
+
+->in next video i learned different loops
+	while,
+	do,for,foreach,
+	difference between while and do loop
+
+->in next video i learned methods in c#
+	structure of method,
+	difference between static and instance methods.
+
+->in next video i learned method parameters in detail
+	value parameter,
+	reference parameter,
+	out parameter,
+	parameter array,
+	method parameters vs method arguments
+
+->in next video i learned namespaces
+	using alias directive
+	different namespaces members
