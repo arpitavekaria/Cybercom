@@ -1,0 +1,19 @@
+=>  Today i watch and learn from videos
+	- instance of class
+	- constructor - State & Behaviour
+	- distructor
+	- static mamber & Object
+	- Method Overriding
+	- Method OverLoding
+	- Method Hinding
+	- Polymorphism
+=>  If we use static keyword in object then we can use name of the class
+=>  In short static member use the name of the class and intance members invoke using instance or object of the class
+=>  We not use access modifier in static constructor also use initialize static fields
+=>  if we not give any access modifier of class name then it's by default private
+=>  In inheritance multiple inheritance not support in C# other all supports in C#
+=>  Polymorphism - in derived class any method of derived class override use virtual method and we use override keyword in override method
+=>  Polymorphism enable are to invoke derived class method using a base class reference variable at run time this a polymorphism
+=>  In overriding we use virtual method for base class and use override keyword in Derived class, and method hinding we use new keyword in derived class
+=>  In method overriding we use base class reference variable pointing to child class object
+=>  In method overloading we can use same method name but different type of parameter or different argument
