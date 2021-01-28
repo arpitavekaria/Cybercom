@@ -1,0 +1,14 @@
+->  Today i completed all videos and learn conceps about
+	- Properties
+	- Stuctures
+	- Difference between Class and Structure
+	- Interface implementation
+	- Inherite method Implicitly and Explisetly
+
+--- Learn some new concepts about in c#
+->  Multiple inheritance using interface.
+->  We create member for getter and setter.
+->  The getter is a read only asscess and setter is write only asscess.
+->  Also learn main diffrence between Class and Structure.
+->  Declaration & Defination of Structure.
+->  The method .IsNullOrEmpty use the the fild is allow or disallow to null or empty field.
