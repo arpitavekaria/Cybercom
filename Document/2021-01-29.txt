@@ -1,0 +1,22 @@
+-> Today i watch and learn from videos about
+	abstract classes
+	difference between abstract class and interface
+	Problems of multiple class inheritance
+	Multiple class inheritance using interfaces
+	Delegates usage in c#
+	Multicast Delegates in C#
+-> A delegate is type safe function pointer that holds a refernce to a function.
+-> for code reduce lambda expression is use for delegate.
+-> multicast delegate is a delegae that has references to more thanone function.
+	two approaches to create multicast delegate
+	=> + or += to register method with the delegate
+	=> - or -= to unregister method with the delegate
+-> i learnand practice above videos and create another console app
+-> in that i have practice,
+	-inheritance
+	-structure
+	-interface
+	-abstract class
+	-multiple class inheritance using interfaces
+	-delegate
+	-multicast delegate.
