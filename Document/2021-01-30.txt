@@ -1,0 +1,13 @@
+->today i watch andlearndfrom today's video
+	-basics of exeption handling
+	-inner exception
+	-custome exception
+	-exception handling absues
+	-exception handling absues solved
+->an exception is a unforseen error that occure when program is running.
+->the inner exception property returns the exception instance that caused the current exception.
+->i have created another console app for practice of today's video and in that,
+	-created StreamReader object for file read
+	-using try catch and finally block handle exception(message,stacktrace) and retriving data
+	-created custom exception for checking user is already in or not
+	-Tried another exeption handling program for practice
