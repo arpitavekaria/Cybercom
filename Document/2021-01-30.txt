@@ -1,4 +1,4 @@
-->today i watch andlearndfrom today's video
+->today i watch and learnd from today's video
 	-basics of exeption handling
 	-inner exception
 	-custome exception
