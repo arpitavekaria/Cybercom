@@ -1,0 +1,13 @@
+C:\Users\Arpita\Desktop\practice\ATMtransaction\ATMtransaction\bin\Debug\netcoreapp3.1\ATMtransaction.exe
+C:\Users\Arpita\Desktop\practice\ATMtransaction\ATMtransaction\bin\Debug\netcoreapp3.1\ATMtransaction.deps.json
+C:\Users\Arpita\Desktop\practice\ATMtransaction\ATMtransaction\bin\Debug\netcoreapp3.1\ATMtransaction.runtimeconfig.json
+C:\Users\Arpita\Desktop\practice\ATMtransaction\ATMtransaction\bin\Debug\netcoreapp3.1\ATMtransaction.runtimeconfig.dev.json
+C:\Users\Arpita\Desktop\practice\ATMtransaction\ATMtransaction\bin\Debug\netcoreapp3.1\ATMtransaction.dll
+C:\Users\Arpita\Desktop\practice\ATMtransaction\ATMtransaction\bin\Debug\netcoreapp3.1\ATMtransaction.pdb
+C:\Users\Arpita\Desktop\practice\ATMtransaction\ATMtransaction\obj\Debug\netcoreapp3.1\ATMtransaction.csprojAssemblyReference.cache
+C:\Users\Arpita\Desktop\practice\ATMtransaction\ATMtransaction\obj\Debug\netcoreapp3.1\ATMtransaction.AssemblyInfoInputs.cache
+C:\Users\Arpita\Desktop\practice\ATMtransaction\ATMtransaction\obj\Debug\netcoreapp3.1\ATMtransaction.AssemblyInfo.cs
+C:\Users\Arpita\Desktop\practice\ATMtransaction\ATMtransaction\obj\Debug\netcoreapp3.1\ATMtransaction.csproj.CoreCompileInputs.cache
+C:\Users\Arpita\Desktop\practice\ATMtransaction\ATMtransaction\obj\Debug\netcoreapp3.1\ATMtransaction.dll
+C:\Users\Arpita\Desktop\practice\ATMtransaction\ATMtransaction\obj\Debug\netcoreapp3.1\ATMtransaction.pdb
+C:\Users\Arpita\Desktop\practice\ATMtransaction\ATMtransaction\obj\Debug\netcoreapp3.1\ATMtransaction.genruntimeconfig.cache

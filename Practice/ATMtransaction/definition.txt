@@ -1,0 +1,32 @@
+
+//----------------------------------------------Definition------------------------------------------------------
+
+Allow user to input name, mobileno, balance, withdrawal amount and four digit number as their PIN.
+Set amount and max withdrawal amount as per your choice.
+Here The types of ATM transaction are
+1) Create account.
+2) Check Balance.
+3) Cash withdrawal.
+4) Cash deposition.
+5) Quit.
+You can opt any of the above transaction according to 
+your need of transaction.
+
+//----------------------------------------------------Program-----------------------------------------------------
+
+-> In this Program i am getting information like name,mobileno,pin,total balance,withdrawal limit from user.
+-> After that if condition is used to check entered pin and user's pin is matched or not then other transaction is performed.
+-> there are 4 transaction in the program
+-> 1) check balance -- it will print the current balance.
+-> 2) cash withdrrawal -- first it will check withdrwal amount is not greater than withdrawal limit then it checked entered amount should be multiple of 100, and check entered amount must be less than total balance, if both conditions are satisfied then we can withdraw the amount from ATM.
+-> 3) cash diposition -- in this entered input amount is added to current amount balance and print total balance.
+-> 4) want to change pin -- in this if user want to change it will check the entered pin and current pin is matched then it wil allow to change the pin.
+-> 5) quit -- this is used for exit the transaction program.
+
+//------------------------------------------------------Extra-----------------------------------------------------
+
+
+-> condition checking for withdrawal amount limit condition is followed or not.
+-> condition checking for entered pin and predefine pin is valid or not.
+-> Also added one case for "Want to change the pin" in case 4:
+
