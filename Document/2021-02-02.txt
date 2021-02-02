@@ -1,0 +1,18 @@
+-> In Today's video i watch and learn,
+	- enums(enumerations)
+	- difference between types and type Members
+	- All Access modifires
+	- Attributes
+	- Reflection
+	- Late Binding using reflection 
+	- override Tostring(), Equals() and GetHashcode()
+
+-> enums is strongly type constants.
+-> types(classes,structs,enums,interfaces,delegates) and type members(field,properties,constructors,methods).
+-> there are five access modifiers.
+	- private
+	- protected
+	- internal
+	- protected public
+	- public
+-> Created one Console App for practice from above topics.
