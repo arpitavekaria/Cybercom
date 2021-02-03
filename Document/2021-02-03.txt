@@ -1,0 +1,48 @@
+-> In Today's video i watch and learn,
+	- Difference between Convert ToString and ToString
+	- Difference between String and StringBuilder
+	- The use of Partial class or structure using partial keyword
+	- The use of Partial Method 
+	- Indexser
+	- Overloading indexers
+	- Optional parameters
+	- Making method parameters optional using method overloading
+	- Making method parameters optional by specifying parameter defaults
+	- Making method parameters optional by using OptionalAttribute
+	- Code snippets
+	- Dictionary
+	- List collection class
+
+-> System.String is immutable and StringBuilder is Mutable.
+-> In immutable string is not change after created but the Mutable string is modified/changeble string
+
+-> Partial class is provide to single class into multipal files and all these files are combine to compile time
+-> The partial keyword is also used to split struct or interface into two or more files.
+
+->The partial method is only teo part 
+	    - Defination
+	    - Implimentation
+-> The use of partial method do not multipal imlimentating declarations
+-> If we can not a impliment method then the C# complier is ignore that Method
+-> This is by default private and we can not use any access modifires
+-> Also use return type void because it's not any type of return in defination
+
+-> There are two types of indexer. 1) int indexer and 2) string indexer
+-> using the indexser we can create special property just like geet and set, the get-set also use in indexer
+-> It can use create with this keyword
+
+-> We can use this ways to use optional method.
+	- Using parameter param keyword
+	- by specifying parameter defaults
+	- And using in optionalAttribute
+
+-> Dictionary
+	- Dictionary is a collection of key, value pairs.
+	- It is provides fast lookups for value using keys.
+	- The Key in dictionary must be unique
+	- In dictionary TryGetValue(), Count(), Remove(), Clear(), Convert in to array
+
+-> Collection class
+	- The List of Collection Class in functions is Contains(), Exists(), Find(), FindLast(), FindAll(), FindIndex(), 	  	  FindLastIndex, Convert array to list,list to array and list to dictionary
+
+-> Created one Console App for practice from above topics.
