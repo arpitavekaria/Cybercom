@@ -43,6 +43,6 @@
 	- In dictionary TryGetValue(), Count(), Remove(), Clear(), Convert in to array
 
 -> Collection class
-	- The List of Collection Class in functions is Contains(), Exists(), Find(), FindLast(), FindAll(), FindIndex(), 	  	  FindLastIndex, Convert array to list,list to array and list to dictionary
+	- The List of Collection Class in functions is Contains(), Exists(), Find(), FindLast(), FindAll(), FindIndex(), FindLastIndex, Convert array to list,list to array and list to dictionary
 
 -> Created one Console App for practice from above topics.
