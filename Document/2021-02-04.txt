@@ -1,0 +1,43 @@
+-> In Today's video i watch and learn,
+-> Working with generic list class and ranges
+	- AddRange() = it allows to add another list of item at the end.
+	- GetRange() =  it will retrive list of item in a list.
+	- InsertRange() = it will insert list of item at specific index.
+	- Removerange() = it will remove range of elements from list.
+
+-> Sort a list of simple types
+	- Sort() = it is used to sort numbers and alphabet in ascending order.
+	- Reverse() = it is used to sort numbers and alphabet in descending order.
+
+-> Sort a list of complex types 
+	- the complex type has to implement ICompabale interface and provide implementation for CompareTo() method.
+
+-> Sort a list of complex types using Comparison delegate
+	- List class expects comparision delegate to be passed as an argument.
+
+-> Some useful methods of List collection class
+	- TrueForAll() = Returns true or false on whether every element in the List  matches the conditions defined by the specified predicate.
+	- AsReadOnly() = Returns a read-only ReadOnlyCollection<T> wrapper for the current collection.
+	- TrimExcess() = Sets the capacity to the actual number of elements in the List, if that number is less than a threshold value.
+
+->  Generic queue collection class
+	- Queue represents a first-in, first out collection of object. It is used when you need a first-in, first-out access of items.
+	- Enqueue() = adds an element to the end of the Queue.
+	- Dequeue() = removes the oldest element from the start of the Queue.
+	- Peek() = returns the oldest element that is at the start of the Queue but does not remove it from the Queue.
+	- Contains() = Determines whether an element is in the Queue
+	- Clear() = Removes all objects from the Queue
+	- Count = Gets the number of elements contained in the Queue.
+
+-> Generic stack collection class
+	- Stack represents a last-in, first out collection of object. It is used when you need a last-in, first-out access to items.
+	- Push() = Inserts an object at the top of the Stack.
+	- Pop() = Removes and returns the object at the top of the Stack.
+	- Peek() = Returns the object at the top of the Stack without removing it.
+	- Contains() = Determines whether an element is in the Stack.
+	- Clear() = Removes all objects from the Stack.
+	- Count = Gets the number of elements contained in the Stack.
+
+-> Also watch video of  Real time example of queue collection class and  Real time example of Queue collection class.
+	 
+-> Created one Console App for practice from above topics.
