@@ -1,0 +1,46 @@
+-> In Today's video i watch and learn,
+
+-> Multithreading
+	- Process = it is what the operating system used to facilitate the excecution of the program by providing the resources required.
+	- Thread = Threads are lightweight processes.
+
+-> Advantages and disadvantages of multithreading
+	- Advantages:
+		1)To maintain a responsive user interface.
+		2)To make an efficient use of processor time, while waiting I/O operation to complete.
+		3)To split large CPU- bound task to be processed simultaneously on a machine, which has multiple processors/cores. 4)Different processors execute different thread simultaneously, so performance improves.
+
+	- Diadvantages:
+		1)If the machine is single processor/cores, then the multithreading causes the overhead over the processor, as it is using context switching
+		2)you have to write more lines of code. Multithreaded Applications are difficult to write, understand, debug and maintain.
+
+-> ThreadStart delegate
+	- This represents the method that should be executed on a thread.This delegate is passed to the Thread constructor.This method is not called until the Thread.Start method is called
+
+-> ParameterizedThreadStart delegate
+	- Use ParameterizedThreadStart delegate to pass data to the thread function.(type safety looses)
+
+-> Passing data to the Thread function in a type safe manner
+	- Encapsulate the thread function and the data it needs in the helper classand use the threadstart delegate to execute the thread function.
+
+-> Retrieving data from Thread function using callback method
+-> Significance of Thread.Join and Thread.IsAlive functions 
+
+-> Protecting shared resources from concurrent access in multithreading
+	- From a performance perspective using interlocked class is better over using locking
+
+-> Difference between Monitor and lock
+	- Both moniter class and lock provides a mechanism that synchronizes access to objects. lock is the shortcut for Moniter.Enter with try and finally.
+
+-> Deadlock in a multithreaded program and how to resolve it.
+	- two threads never give up their locks,hence a deadlock
+
+-> Performance of a multithreaded program
+	- on a machine that has multiple processors,multiplle threads can excecute application code in parallel on different cores.
+	- on a machine that has single processors,multiplle threads can excecute, one after the other or wait until one thread finishes.
+
+-> Anonymous methods
+	- Anonymous methods is a method without a name. they provide us a way of creating delegate instances without having to write a separate method.
+	
+-> Lambda expression,Func delegate,Async and await. 
+-> Created one Console App for practice from above topics.
