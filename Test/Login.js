@@ -18,7 +18,7 @@ function redirectRegister()
 }
 function hideRegister() 
 {
-    to hide register now button
+    //to hide register now button
     if (localStorage.getItem('admin')) {
         document.getElementById("register").style.visibility = "hidden";
     }
