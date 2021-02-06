@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="User.css"/>
 </head>
 
-<body>
+<body onload="displayUserData()">
     <header>
         <h1>User</h1>
     </header>
@@ -39,8 +39,8 @@
             <input type="email" id="email" placeholder="Email">
             <input type="text" id="password" placeholder="Password">
             <input type="date" id="Birthdate" placeholder="Birthdate">
-            <input type="button" id="AddUser" value="Add">
-            
+            <input type="button" id="addUser" onclick="addUser()" value="Add"> 
+            <span id="update" style="visibility: hidden"></span>       
         </div>
 
     </div>
