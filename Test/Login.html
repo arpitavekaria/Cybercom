@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="Login.js"></script>
     <style>
         body {
             text-align: center;
@@ -18,8 +17,10 @@
     </style>
 </head>
 
-<body>
+<body onload="hideRegister()">
+
     <h1 style="color: red">Login</h1>
+
     <form>
         <table>
             <tr>
@@ -38,17 +39,13 @@
                     <input type="password" id="password">
                 </td>
             </tr>
-
-
-
-
         </table>
+
         <br>
-        <input type="button" value="login">
+        <input type="button" onclick="loginAdmin()" value="login">
         <br>
-        <input type="button" id="register" value="Register now">
+        <input type="button" id="register" onclick="redirectRegister()" value="Register">
     </form>
-
+        <script src="Login.js"></script>
 </body>
-
 </html>
