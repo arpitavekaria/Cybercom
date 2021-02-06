@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User</title>
+    <link rel="stylesheet" href="User.css"/>
+</head>
+
+<body>
+    <header>
+        <h1>User</h1>
+    </header>
+
+    <div>
+        <ul>
+            <li>
+                <a href="Dashboard.html">Dashboard</a>
+            </li>
+            <li>
+                <a class="active" href="User.html">Users</a>
+            </li>
+            <li>
+                <a href="UserSession.html">Login Session</a>
+            </li>
+            <li>
+                <a href="Login.html">Logout</a>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Add User</h2>
+
+        <div class="form-container">
+            <input type="text" id="name" placeholder="Name">
+            <input type="email" id="email" placeholder="Email">
+            <input type="text" id="password" placeholder="Password">
+            <input type="date" id="Birthdate" placeholder="Birthdate">
+            <input type="button" id="AddUser" value="Add">
+            
+        </div>
+
+    </div>
+
+    <div>
+        <h2>User List</h2>
+
+        <div class="form-container">
+            <table id="displaytable" border="1px">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>BirthDate</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+        <script src="User.js"></script>
+</body>
+</html>

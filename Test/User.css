@@ -1,16 +1,17 @@
         h1{
             color: grey;
         }
-        header,h2 {
+        header {
             text-align: center;
         }
-        
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
+
+        td {
+            padding: 5px;
+        }
+
+        table {
+            margin: auto;
+            width: 100%;
         }
 
         li {
@@ -29,6 +30,18 @@
             background-color: #111;
         }
 
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
         .active {
             background-color: #0492C2;
+        }
+
+        .form-conatiner {
+            width: 70%;
         }

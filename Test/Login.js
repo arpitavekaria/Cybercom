@@ -1,5 +1,5 @@
-console.log("hello");
-function loginAdmin() {
+function loginAdmin() 
+{
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
@@ -11,14 +11,14 @@ function loginAdmin() {
         window.location.href = "Dashboard.html";
     }
 }
+
 function redirectRegister() 
 {
-    // redirect to registration page
     window.location.href = "Registration.html";
 }
+
 function hideRegister() 
 {
-    //to hide register now button
     if (localStorage.getItem('admin')) {
         document.getElementById("register").style.visibility = "hidden";
     }

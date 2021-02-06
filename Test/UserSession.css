@@ -1,10 +1,21 @@
         h1{
             color: grey;
         }
+
         header,h2 {
             text-align: center;
         }
-        
+
+        table {
+
+            margin: auto;
+            width: 50%;
+        }
+
+        td {
+            padding: 5px;
+        }
+
         ul {
             list-style-type: none;
             margin: 0;

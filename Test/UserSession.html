@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="Dashboard.css"/>
+    <title>UserSession</title>
+    <link rel="stylesheet" href="UserSession.css"/>
 </head>
 
 <body>
@@ -14,16 +14,16 @@
         <h1>Dashboard</h1>
     </header>
 
-    <div>
+    <div id="nav">
         <ul>
             <li>
-                <a class="active" href="Dashboard.html">Dashboard</a>
+                <a href="Dashboard.html">Dashboard</a>
             </li>
             <li>
                 <a href="User.html">Users</a>
             </li>
             <li>
-                <a href="UserSession.html">Login-Session</a>
+                <a class="active" href="UserSession.html">Login Session</a>
             </li>
             <li>
                 <a href="Login.html">Logout</a>
@@ -31,9 +31,18 @@
         </ul>
     </div>
 
-    <div>
-        <h2>Hello!!</h2>
-    </div>
-</body>
+    <div id="table-container">
+        <h2>User Session</h2>
+        <table id="displaytable" border="1px">
+            <tr>
+                <th>Name</th>
+                <th>Start Session</th>
+                <th>End Session</th>
+            </tr>
 
+        </table>
+    </div>
+
+    <script src="UserSession.js"></script>
+</body>
 </html>
