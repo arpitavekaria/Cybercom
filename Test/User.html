@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="User.css"/>
 </head>
 
-<body onload="displayUserData()">
+<body onload="UserDisplay()">
     <header>
         <h1>User</h1>
     </header>
@@ -37,10 +37,10 @@
         <div class="form-container">
             <input type="text" id="name" placeholder="Name">
             <input type="email" id="email" placeholder="Email">
-            <input type="text" id="password" placeholder="Password">
+            <input type="password" id="password" placeholder="Password">
             <input type="date" id="Birthdate" placeholder="Birthdate">
-            <input type="button" id="addUser" onclick="addUser()" value="Add"> 
-            <span id="update" style="visibility: hidden"></span>       
+            <input type="button" id="addUser" onclick="AddUser()" value="Add">
+            <span id="updateUser" style="visibility: hidden"></span>       
         </div>
 
     </div>
