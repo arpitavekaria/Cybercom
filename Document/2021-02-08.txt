@@ -1,0 +1,19 @@
+-> In Today's task i revised all the videos of the introduction to C# videos.
+
+-> I have refered all topics like,
+	- Condition Statement
+	- Class and Properties
+	- Structs
+	- Interface
+	- Abstract Class 
+	- Delegates
+	- Exception handling
+	- Dictonary
+	- Indexers
+	- Collection  
+	- Partial Class and List
+	- Multithreading
+
+-> Read some topic details from w3school.
+-> Also some done basic program from includehelp and sanfoundry.
+-> Created one Console App for practice and implemented from above topics.
