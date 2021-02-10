@@ -37,7 +37,7 @@
 
 -> The Identity column is used for Identify values,
 -> Ex: in ID by default increment by 1 and every id is unique then use identity column
-	- If we can add data on deletd ID 1 then we can first on the Identity then we can able to add record
+	- If we can add data on deletd ID 1 then we can first on the Identity then we can able to add record.
 	- We can also start with any id to add record using DBCC CHECKIDENT({TABLE_NAME}, RESEED, start_number_with-1)
 
 	- For retriving data using below three ways,
