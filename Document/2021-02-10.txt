@@ -1,0 +1,67 @@
+-> Today's task i watch and learn new series which is SQL Server.
+-> I have completed all the database videos and Learn the topics,
+	- Connecting to SQL Server
+	- Creating, altering and dropping a database
+	- Creating and working with tables
+	- Adding a default constraint
+	- Cascading referential integrity constraint
+	- Adding a check constraint
+	- Identity Column
+	- get the last generated identity column value
+	- Unique key constraint
+	- Group by
+	- Joins
+	- Advanced or intelligent joins in sql server
+
+-> For create a new Database, table, view etc we can use 'create' keyword.
+-> We can alter and rename databse or table, We can not delete system databases.
+-> Primary key is used for uniquely indetify each record in table and it does not allow null values.
+-> Default Constraint it use if over requirement is not enter data at any column then store difault value using default constraints.
+
+-> If one table id give another table using foreign key and delete one row then we can not able to delete those row.
+	- Then we can use Cascading Referential Integrity. 
+	- There are 4 types: No Action, Cascade, Set Null, Set Default
+	- No Action : The no action is by default selected and it generate error at delete time
+	- Cascade : It is use for delete primary table data with forain table data
+	- Set Null : If we delete primary table column then set null at foreign table
+	- Set Default : If we delete primary table column then set Default value at foreign table but default constaint must be required
+
+-> Adding a check constrain,
+-> Ex: If at data insert time anyone add data in age less then 0 or more then 120 then give error do not enter data in table
+	- If we add Constrain then quary is
+		ALTER TABLE {TABLE_NAME}
+		ADD CONSTRAINT {CONSTRAINT_NAME} CHECK {BOOLEAN_EXPRESSION}
+	- And if the delete constraint then,
+		ALTER TABLE {TABLE_NAME}
+		DROP CONSTRAINT {CONSTRAINT_NAME}
+
+-> The Identity column is used for Identify values,
+-> Ex: in ID by default increment by 1 and every id is unique then use identity column
+	- If we can add data on deletd ID 1 then we can first on the Identity then we can able to add record
+	- We can also start with any id to add record using DBCC CHECKIDENT({TABLE_NAME}, RESEED, start_number_with-1)
+
+	- For retriving data using below three ways,
+	- scope_identity() : we can direct use scope_identity() function. It can return value only same session record.
+	- @@identity : Here also retrive last key value we insert or also called give a last identity. 
+	- ident_current({TABLE_NAME}) : it can show to any session of record update.
+
+-> Unique key constraint,
+	- We can use more then one unique in one table but not able to use more then one primary key
+	- The Major diffrence in Primary key and Unique is Primary key dosen't allow null value but unique allow only one null value
+
+-> Group by is use to group a select a set of rows for summary or one or more columns or expressions.It is also always use one or more aggregate function.
+
+-> The Aggrigate functions are:
+	- COUNT: counts how many rows are in a particular column.
+	- SUM: adds together all the values in a particular column.
+	- MIN: and MAX return the lowest and highest values in a particular column, respectively.
+	- AVG: calculates the average of a group of selected values.
+	- Also other aggrigate functions are CHECKSUM_AGG, COUNT, COUNT_BIG, GROUPING, GROUPING_ID.
+
+-> Types of join:
+	- cross join : Return Cartesian product of the tables involved in the join
+	- Inner join : Return only the matching rows. Non matching rows are eliminated
+	- Left join : Return all the matching rows and Non matching rows from left Table
+	- Right Join : Return all the matching rows and Non matching rows from right Table
+	- full join : Return all rows from both tables, including the non-matching rows.
+
