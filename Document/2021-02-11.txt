@@ -1,0 +1,37 @@
+-> Today's task i watch and learn from today's SQL videos as per schedule given by,
+
+-> In today i watched and learn,
+	- Self join
+	- Different ways to replace NULL 
+	- Coalesce function
+	- Union and union all
+	- Stored procedures
+	- Stored procedures with output parameters
+	- Stored procedure output parameters or return values
+	- Advantages of stored procedures
+	- Built in string functions
+	- LEFT, RIGHT, CHARINDEX and SUBSTRING functions
+	- Replicate, Space, Patindex, Replace and Stuff string functions
+	- DateTime functions
+	- IsDate, Day, Month, Year and DateName DateTime functions
+	- DatePart, DateAdd and DateDiff functions
+
+-> COALESCE() function returns the first non null value.
+-> UNION and UNION ALL operators are used to combine the result set of two or more SELECT queries.
+-> A stored procedure is group of transact SQL statements.
+-> To encrypt the text of stored procedure,use WITH ENCRYPTION option.it is not possible to view the text of an encrypted SP.
+-> To create an SP with output parameter,we use the keyword OUT or OUTPUT.
+
+-> Advantages of SP
+	- Execution plan retention and reusability.
+	- Reduce network traffic
+	- Code reusability and better maintainability
+	- Better Security
+	- Avoids SQL injection attack
+ 
+-> String functions -- ASCII(),CHAR(),LTRIM(),RTRIM(),LOWER(),UPPER(),REVERSE(),LEN()
+-> Commonly used built in functions -- LEFT(),RIGHT(),CHARINDEX(),SUBSTRING()
+-> Also more funtions -- Replicate(),Space(),Patindex(),Replace(),Stuff()
+-> DateTime functions -- IsDate(),Day(),Month(),Year(),DateName()
+-> Also more functions -- DatePart(),DateAdd(),DateDiff()
+-> Also fire queries in MS-SQL server 2012 from above concepts.
