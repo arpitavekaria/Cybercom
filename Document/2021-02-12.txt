@@ -1,0 +1,59 @@
+-> Today's task i watch and learn from today's SQL videos as per schedule given by,
+-> Cast and Convert functions,
+	- To convert one data type to another,CAST and CONVERT functions can be used.
+	- Cast() = it is based in ANSI standard.
+	- Convert() = it is specific to SQL Server.
+
+-> Mathematical functions,
+	- ABS() = ABS stands for absolute and return,the absolute number.
+	- CEILING() = it returns the smallest interger value greater than or equal to the parameter.
+	- FLOOR() = it returns the largest interger value less than or equal to the parameter.		
+	- POWER() = Returns the value of a number raised to the power of another number.
+	- SQAURE() = Returns the square of a number.
+	- SQRT() = Returns the square root of a number.
+	- RAND() = Returns a random number.
+	- ROUND() = Rounds a number to a specified number of decimal places.
+	
+-> There are 3 types of user define functions,
+	1) Scalar functions -- Returns a scalar value
+	2) Inline table-valued functions -- Returns a table
+	3) Multi-statement table-valued functions -- similar to Inline table-valued function,with few differences
+	- Inline table-valued functions are better for performance,than Multi-statement table-valued functions.
+
+-> Important concepts related to function,
+	- Deterministic functions -- it always result in the same output every time they are called with a fixed set of input values and given the same condition of the database.
+	- Examples -- Square(),Power(),Sum(),AVG(),Count().
+
+	- Nondeterministic functions -- it result in different output each time they are called with a fixed set of input values even if the database state that they access remains the same.
+	- Examples -- GetDate() function
+
+	- Encryption -- To encrypt the text of a Function then you need to use the 'With Encryption' Option which is provided by the SQL Server while creating the Function.
+
+	- Schemabinding -- The Schemabinding option specifies that the function is bound to the database objects that it references. So, when the Schemabinding option is specified the database object cannot be modified in any way that would affect the function definition.
+
+-> Temporary tables,
+	- Temporary tables are stored in tempdb. They work like a regular table in that you can perform the operations select, insert and delete as for a regular table. If created inside a stored procedure they are destroyed upon completion of the stored procedure.
+	1) Local Temporary Tables -- Local temporary tables are the tables stored in tempdb. Local temporary tables are temporary tables that are available only to the session that created them. These tables are automatically destroyed at the termination of the procedure or session. They are specified with the prefix #.
+	2) Global Temporary Tables -- Global temporary tables are also stored in tempdb. Global temporary tables are temporary tables that are available to all sessions and all users. They are dropped automatically when the last session using the temporary table has completed. They are specified with the prefix ##.
+
+-> Indexes,
+	- Indexes are used to retrieve data from the database more quickly than otherwise. The users cannot see the indexes, they are just used to speed up searches/queries.
+	
+-> Types of indexes,
+	- Clusterd -- Clustered indexes sort and store the data rows in the table or view based on their key values. These are the columns included in the index definition. There can be only one clustered index per table, because the data rows themselves can be stored in only one order.  
+	- Nonclustered -- Nonclustered indexes have a structure separate from the data rows. A nonclustered index contains the nonclustered index key values and each key value entry has a pointer to the data row that contains the key value.
+	- Unique Index -- Unique Index is used to enforce uniqueness of key values in the index.
+
+-> Advantages and disadvantages of indexes,
+	Advatanges    - Searching For Records
+		      - Sorting Records
+		      - Grouping Records
+		      - Maintaining a Unique Column
+	Disadvantages - Additional Disk space
+		      - Insert Update and delete statement become Slow
+		      - A Disadvantage to Clustered Indexes
+
+-> Views,
+	Views in SQL are kind of virtual tables. A view also has rows and columns as they are in a real table in the database. We can create a view by selecting fields from one or more tables present in the database.
+
+-> Also fire queries in MS-SQL server 2012 from above concepts.
