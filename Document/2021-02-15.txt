@@ -1,0 +1,32 @@
+-> Today's task i watch and learn from today's SQL videos as per schedule given by,
+
+-> View limitations,
+	1) You cannot pass parameters to SQL Server views
+	2) Cannot use an Order By clause with views without specifying FOR XML or TOP
+	3) Views cannot be created on Temporary Tables
+	4) You cannot associate rules and defaults with views
+
+-> Trigger
+	- A trigger is a stored procedure in database which automatically invokes whenever a special event in the database occurs.
+	- There are three types of trigger,
+		1) DML triggers
+			- AFTER Triggers = After triggers,fires after the triggering action.
+			- Instead of Triggers = Instead of triggers,fires instead of the triggering action(Instead of insert trigger,Instead of update triggers,Instead of delete triggers)
+		2) DDL triggers
+		3) Logon triggers
+
+-> Derived tables and common table expressions,
+	- common table expressions(CTE) is introducedin SQL server 2005.A CTE is a temporary result set,that can be referenced within a SELECT,INSERT,UPDATE or DELETE statement,that immediately follows the CTE.
+
+-> Updatable common table expressions,
+	- if a CTE is created on one base table,then it is possible to UPDATE the CTE,which in turn will update the underlying base table.
+	- if a CTE is created on more than one table,and if the UPDATE affects only one base table,then the UPDATE is allowed.
+	- if a CTE is based on multiple tables,and if the UPDATE statement affects more than 1 base table table,then the UPDATE is not allowed.
+
+-> Database normalization,
+	- Database normalization is the process of organizing the attributes of the database to reduce or eliminate data redundancy.
+	- First Normal Form(1NF) = If a relation contain composite or multi-valued attribute, it violates first normal form or a relation is in first normal form if it does not contain any composite or multi-valued attribute. A relation is in first normal form if every attribute in that relation is singled valued attribute.
+	- Second Normal Form(2NF) = To be in second normal form, a relation must be in first normal form and relation must not contain any partial dependency. 
+	- Third Normal Form(3NF) = A relation is in third normal form, if there is no transitive dependency for non-prime attributes as well as it is in second normal form.
+	
+-> Also fire queries in MS-SQL server 2012 from above concepts.
