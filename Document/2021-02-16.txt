@@ -1,0 +1,93 @@
+-> Today's task i watch and learn from today's SQL videos as per schedule given by,
+-> Error handling,
+	- Error handling in SQL Server 2000--@@Error
+	- Error handling in SQL Server 2005 & later--Try...Catch
+	- RAISEERROR('Error Message',ErrorSeverity,ErrorState) create and return custom error
+		- Severity level = 16(indicates general error that can be coreecteed by the user)
+		- State = Number between 1 & 255.
+		- RAISEERROR only generates errora with state from 1 through 127.
+	- @@Error returns a NON-ZERO value,if there is an error,otherwise ZERO,indicating that the previous SQL statement encountered no errors.
+	
+	- Handling errors using TRY…CATCH
+		- Anything between the BEGIN TRY and END TRY is the code that we want to monitor for an error. So, if an error would have happened inside this TRY statement, the control would have immediately get transferred to the CATCH statement and then it would have started executing code line by line.
+	- ERROR_NUMBER – Returns the internal number of the error
+	- ERROR_STATE – Returns the information about the source
+	- ERROR_SEVERITY – Returns the information about anything from informational errors to errors user of DBA can fix, etc.
+	- ERROR_LINE – Returns the line number at which an error happened on
+	- ERROR_PROCEDURE – Returns the name of the stored procedure or function
+	- ERROR_MESSAGE – Returns the most essential information and that is the message text of the error
+
+-> Transactions,
+	- Transactions group a set of tasks into a single execution unit. Each transaction begins with a specific task and ends when all the tasks in the group successfully complete. If any of the tasks fail, the transaction fails. Therefore, a transaction has only two results: success or failure. 
+	- The following commands are used to control transactions.
+		COMMIT − to save the changes.
+		ROLLBACK − to roll back the changes.
+		SAVEPOINT − creates points within the groups of transactions in which to ROLLBACK.
+		SET TRANSACTION − Places a name on a transaction.
+
+-> Transactions in sql server and ACID Tests,
+	- Incomplete steps result in the failure of the transaction. A database transaction, by definition, must be atomic, consistent, isolated and durable. These are popularly known as 
+ACID properties. 
+	- Atomicity − ensures that all operations within the work unit are completed successfully. Otherwise, the transaction is aborted at the point of failure and all the previous operations are rolled back to their former state.
+	- Consistency − ensures that the database properly changes states upon a successfully committed transaction.
+	- Isolation − enables transactions to operate independently of and transparent to each other.
+	- Durability − ensures that the result or effect of a committed transaction persists in case of a system failure.
+	
+-> Subqueries,
+	- A Subquery or Inner query or a Nested query is a query within another SQL query and embedded within the WHERE clause.A subquery is used to return data that will be used in the main query as a condition to further restrict the data to be retrieved.
+	- Subqueries can be used with the SELECT, INSERT, UPDATE, and DELETE statements along with the operators like =, <, >, >=, <=, IN, BETWEEN, etc.
+	- There are a few rules that subqueries must follow
+		- Subqueries must be enclosed within parentheses.
+		- A subquery can have only one column in the SELECT clause, unless multiple columns are in the main query for the subquery to compare its selected columns.
+		- An ORDER BY command cannot be used in a subquery, although the main query can use an ORDER BY. The GROUP BY command can be used to perform the same function as the ORDER BY in a subquery.
+		- Subqueries that return more than one row can only be used with multiple value operators such as the IN operator.
+		- The SELECT list cannot include any references to values that evaluate to a BLOB, ARRAY, CLOB, or NCLOB.
+		- A subquery cannot be immediately enclosed in a set function.
+		- The BETWEEN operator cannot be used with a subquery. However, the BETWEEN operator can be used within the subquery.
+	
+-> Correlated subquery,
+	- Correlated subqueries are used for row-by-row processing. Each subquery is executed once for every row of the outer query.
+	- A correlated subquery is evaluated once for each row processed by the parent statement. The parent statement can be a SELECT, UPDATE, or DELETE statement.
+	- A correlated subquery is one way of reading every row in a table and comparing values in each row against related data. It is used whenever a subquery must return a different result or set of results for each candidate row considered by the main query.
+
+-> Cursors,
+	- Cursor is a Temporary Memory or Temporary Work Station. It is Allocated by Database Server at the Time of Performing DML operations on Table by User. Cursors are used to store Database Tables. 
+
+-> List all tables in a sql server database using a query,
+	- SYSOBJECTS
+	- SYS.TABLES
+	- INFORMATION_SCHEMA.TABLES	
+
+->  If we retrive all tables in database using query using sysobjects then use xtype are 'U'. U stands for User table
+	- Other xtypes are:
+		- AF: Aggregate Function
+		- C: check constraint
+		- F: Forain key
+		- PK: Primary Key
+		- S: System Table
+		- V: view
+		- P: Storeprocedure etc.
+
+->  Re-runnable script nothing but if any one table are created and we create other table using quary then show the message already created
+	- there are two ways to check created or not table. 1) information_schema.table or 2) object_id('table_name')
+	- It is also apply in tables, columns,
+
+->  In some time if we get some wrong datatype and we can edit using GUI base in that table then its's generate error at save time. It's solve two ways
+	- Using alter the table
+	- Second way is in tools->Options->Designers->uncheck Prevent saving change that require table re-creation
+
+->  In store procedure we can create optional parameters base on requrements.
+	- In optional parameters use in Null or we can also pass any other values base on requrements.
+	- Ex: If our requrements is user are any one filter apply on data and we can show result for that one apply result and other parameters are not required to filter then the default value null
+
+->  Merge use to merge two tables.
+
+->  Except operator return unique rows from the left query table that aren't in the right query results.
+
+->  Except filter duplicates and returns only Distinct rows from the left query that aren't in the right query result, where Not in dose not filter the duplicates
+	- Except operator expects the same number of columns in both queries, but notin compares a single column from the outer query with a single column from sub-query.
+
+->  Intersect filters duplicates and returns only DISTINCT rows that are common between the left and right query, where inner join does not filter the duplicates.
+	- The Intersect also return null row but the inner join does not return null row
+
+-> Also fire queries in MS-SQL server 2012 from above concepts.
