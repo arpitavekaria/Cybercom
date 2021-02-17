@@ -1,0 +1,90 @@
+-> Today's task i watch and learn from today's SQL videos as per schedule given by,
+-> DDL Triggers,
+	- DDL triggers fire in response to a variety of Data Definition Language (DDL) events. 
+	- These events primarily correspond to Transact-SQL statements that start with the keywords CREATE, ALTER, DROP, GRANT, DENY, REVOKE or UPDATE STATISTICS. 
+	- Certain system stored procedures that perform DDL-like operations can also fire DDL triggers.
+
+-> Server scoped ddl triggers,
+	- When we create a server-scoped DDL trigger, then it will be fired in response to the DDL events happening in all of the databases on that particular server.
+
+-> sql server trigger execution order,
+	- use sp_settriggerorder to change the replication trigger to a Last or None trigger
+	1) The server-level trigger marked First.
+	2) Other server-level triggers.
+	3) The server-level trigger marked Last.
+	4) The database-level trigger marked First.
+	5) Other database-level triggers.
+	6) The database-level trigger marked Last.
+
+-> Logon Triggers,
+	- Logon triggers fire stored procedures in response to a LOGON event. This event is raised when a user session is established with an instance of SQL Server. Logon triggers fire after the authentication phase of logging in finishes, but before the user session is actually established. 
+	- All messages originating inside the trigger that would typically reach the user, such as error messages and messages from the PRINT statement, are diverted to the SQL Server error log. Logon triggers do not fire if authentication fails.
+
+-> Select into in sql server,
+	- The SELECT INTO statement copies data from one table into a new table.
+
+-> Difference between where and having,
+	- WHERE Clause--	
+		- WHERE Clause is used to filter the records from the table based on the specified condition.
+		- WHERE Clause cannot contain aggregate function
+		- WHERE Clause is used before GROUP BY Clause
+		- WHERE Clause can be used without GROUP BY Clause
+		- WHERE Clause implements in row operations
+	- HAVING Clause--
+		- HAVING Clause is used to filter record from the groups based on the specified condition.
+		- HAVING Clause can contain aggregate function
+		- HAVING Clause is used after GROUP BY Clause
+		- HAVING Clause cannot be used without GROUP BY Clause
+		- HAVING Clause implements in column operation	
+
+-> Table valued parameters in SQL Server,
+	- Table-valued parameters are declared by using user-defined table types. 
+	- You can use table-valued parameters to send multiple rows of data to a Transact-SQL statement or a routine, such as a stored procedure or function, without creating a temporary table or many parameters.
+
+-> Grouping Sets,
+	-  A grouping set is a group of columns by which you group. Typically, a single query with an aggregate defines a single grouping set.
+
+-> Grouping function and GROUPING ID function,
+	- The ROLLUP and CUBE operators are used to return results aggregated by the columns in the GROUP BY clause.
+	- The GROUPING and GROUPING_ID functions are used to identify whether the columns in the GROUP BY list are aggregated (using the ROLLUP or CUBE operators) or not.
+	- There are two major differences between the GROUPING and GROUPING_ID Functions.
+		- The GROUPING function is applicable on a single column, whereas the column list for the GROUPING_ID function has to match the column list in the GROUP BY clause.
+		- The GROUPING function indicates whether a column in the GROUP BY list is aggregated or not. It returns 1 if the result set is aggregated, and 0 if the result set is not aggregated.
+
+-> The Transact-SQL debugger allows you to interactively debug stored procedures by displaying the SQL call stack, local variables, and parameters for the SQL stored procedure. 
+
+-> OVER clause and Row Number function,
+	- the OVER clause defines a window or user-specified set of rows within a query result set.
+	- the following arguments in their OVER clause:
+		- PARTITION BY that divides the query result set into partitions.
+		- ORDER BY that defines the logical order of the rows within each partition of the result set.
+		- ROWS/RANGE that limits the rows within the partition by specifying start and end points within the partition. It requires ORDER BY argument and the default value is from the start of partition to the current element if the ORDER BY argument is specified.
+
+-> UNPIVOT,
+	- UNPIVOT carries out almost the reverse operation of PIVOT, by rotating columns into rows.
+	- UNPIVOT isn't the exact reverse of PIVOT. PIVOT carries out an aggregation and merges possible multiple rows into a single row in the output. 
+	- UNPIVOT doesn't reproduce the original table-valued expression result because rows have been merged.
+
+-> Choose function,
+	- Syntax: CHOOSE(index_num, value1, [value2], ...)
+	- Uses index_num to return a value from the list of value arguments. Use CHOOSE to select one of up to 254 values based on the index number.
+
+-> IIF function,
+	- Syntax: IIf ( expr , truepart , falsepart )
+	- Uses IIf to determine if another expression is true or false. If the expression is true, IIf returns one value; if it is false, IIf returns another. You specify the values IIf returns.
+
+-> EOMONTH function,
+	- Syntax: EOMONTH(start_date, months)
+	- Returns the serial number for the last day of the month that is the indicated number of months before or after start_date.
+
+-> DATEFROMPARTS function
+	- Syntax: DATEFROMPARTS ( year, month, day )  
+	- This function returns a date value that maps to the specified year, month, and day values.
+
+-> DateTime2FromParts function,
+	- Syntax: DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precision )
+	- This function returns a datetime2 value for the specified date and time arguments. The returned value has a precision specified by the precision argument.
+
+-> And Also learned Difference between DateTime and DateTime2 and Difference between DateTime and SmallDateTime.
+-> Also fire queries in MS-SQL server from above concepts.
+	
