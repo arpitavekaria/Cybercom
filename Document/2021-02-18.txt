@@ -1,0 +1,78 @@
+-> Today's task i watch and learn from today's SQL videos as per schedule given by,
+-> Sequence object,
+	- A sequence is a user-defined schema bound object that generates a sequence of numeric values according to the specification with which the sequence was created.
+	- The sequence of numeric values is generated in an ascending or descending order at a defined interval and can be configured to restart (cycle) when exhausted.
+	- Syntax: CREATE SEQUENCE [schema_name . ] sequence_name  
+   		  [ AS [ built_in_integer_type | user-defined_integer_type ] ]  
+    		  [ START WITH <constant> ]  
+	  	  [ INCREMENT BY <constant> ]  
+  		  [ { MINVALUE [ <constant> ] } | { NO MINVALUE } ]  
+  		  [ { MAXVALUE [ <constant> ] } | { NO MAXVALUE } ]  
+  		  [ CYCLE | { NO CYCLE } ]  
+  		  [ { CACHE [ <constant> ] } | { NO CACHE } ]  
+  		  [ ; ]
+
+-> Difference between sequence and identity,
+	- The Identity property is a column property meaning it is tied to the table, whereas the sequence is a user-defined database object and it is not tied to any specific table meaning its value can be shared by multiple tables.
+	- In case of Identity to generate the next identity value, a row has to be inserted into the table, whereas in case of sequence object we don’t require to add a row into the table in order to generate the next sequence value. You can use the NEXT VALUE FOR clause to generate the next sequence value in SQL Server.
+	- In the case of Sequence Object, you can use the CYCLE option to specify whether the sequence should restart automatically when the sequence object value reached the max or min value, whereas in case of Identity property we don’t have such option to automatically restart the identity values.
+
+-> GUID in SQL Server,
+	- Creates a unique value of type uniqueidentifier.
+	- syntax: NEWID ( )
+
+-> How to check GUID is null or empty,
+	- if a GUID variable is NULL,then initialize it with a new GUID value,else use the existing value
+	- An empty GUID is a GUID with all ZEROS.
+
+-> Dynamic SQL,
+	- Dynamic SQL is a programming technique that enables you to build SQL statements dynamically at runtime.
+	- For example, dynamic SQL lets you create a procedure that operates on a table whose name is not known until runtime.
+	- To execute the DynamicSQL use system stored procedure sp_excecutesql.
+
+-> Prevent sql injection with dynamic sql,
+	- Always use parameters to build dynamic sql statements,which prevents SQL injection.
+
+-> Dynamic SQL in Stored Procedure,
+	- Whether you are creating dynamic SQL in a client application or in a stored procedure always use parameters instead of concatenating strings.
+	- Using parameters to create dynamic sql statements prevents SQL injection.
+
+-> Sql server query plan cache,
+	- Whenever a query is executed in SQL Server, its execution plan, as well as some useful execution data are placed into the plan cache for future use.
+	- This information is a treasure trove of metrics that can allow some very useful insight into your server’s performance and resource consumption. 
+	- Sys.dm_exec_query_stats: Provides details about executions of the query, such as reads, writes, duration, etc…
+	- Sys.dm_exec_sql_text: This function includes the text of the query executed. The plan handle is a uniquely identifying ID for a given execution plan.
+	- sys.dm_exec_query_plan: Also a function of plan handle, this provides the XML query execution plan for a given query.
+	- sys.databases: System view that provides quite a bit of info on each database on this instance.
+
+-> exec vs sp executesql in sql server,
+	- EXEC  (also known as “Dynamic String Execution” or DSE)
+	- Allows *any* construct to be built.
+	- Treats the statement similarly to an adhoc statement. This means that the statement goes through the same process that adHoc statements do – they are parsed, probably parameterized and possibly deemed “safe” for subsequent executions to re-use.
+	- Does not have strongly typed parameters in the adhoc statement and therefore can cause problems when the statements are executed
+
+	- sp_executesql (also known as “Forced Statement Caching”)
+	- Allows for statements to be parameterized.
+	- Only allows parameters where SQL Server would normally allow parameters; however, this string can be built using forms of dynamic constructs. I’ll give more details on this in additional posts.
+	- Has strongly typed variables/parameters – and this can reduce injection and offer some performance benefits.
+
+-> Quotename function,
+	- syntax: QUOTENAME ( 'character_string' [ , 'quote_character' ] )
+	- 'character_string' Is a string of Unicode character data. character_string is sysname and is limited to 128 characters. Inputs greater than 128 characters return NULL.
+	- 'quote_character' Is a one-character string to use as the delimiter. Can be a single quotation mark ( ' ), a left or right bracket ( [] ), a double quotation mark ( " ), a left or right parenthesis ( () ), a greater than or less than sign ( >< ), a left or right brace ( {} ) or a backtick ( ` ). NULL returns if an unacceptable character is supplied. If quote_character is not specified, brackets are used.
+	- To prevent this SQL injection, QUOTENAME() function is used
+
+-> Dynamic SQL vs Stored Procedure,
+	- Performance :  Stored procedures beat dynamic SQL in terms of performance. 
+	- Separation of Concerns : In terms of separation of concerns, stored procedures beat dynamic SQL hands down.
+	- Network Traffic : Stored procedures produce less network traffic then dynamic SQL because executing a stored procedure requires only the procedure name and parameters (if any) to be sent over the network.
+	- SQL Injection Attacks : Stored procedures are not vulnerable to SQL Injection attacks where Dynamic SQL queries are vulnerable to SQL injection attacks 
+	- Reusability of Cached Query Plans : Stored procedures improve database performance as they allow cached query plans to be reused.
+	- Maintenance : Stored procedures with static SQL are easier to maintain.dynamic SQL you might have to write SQL script at multiple places, but in such cases, updating script at one place doesn’t affect the other.
+	
+-> Temp tables in dynamic sql,
+	- temp table created by dynamic SQL are not accessible fromthe calling procedure
+	- they are dropped when the dynamic SQL block in the stored procedure completes excecution.
+	- on the other hand,dynamic SQL block can access temp tables created by the calling stored procedure.
+
+-> Also fire queries in MS-SQL server from above concepts.
