@@ -1,0 +1,59 @@
+-> Today's task i watch and learn from today's ADO.net videos as per schedule given by,
+
+-> What is ADO.NET,
+	- ADO.NET stands for ActiveX Data Object is a database access technology created by Microsoft as part of its .NET framework that can access any kind of data source.
+	- It’s a set of object-oriented classes that provides a rich set of data components to create high-performance, reliable and scalable database applications for client- server applications as well as distributed environments over the Internet and intranets.
+	- the following are, a few of the different types of .NET applications that use ADO>NET to connect to a database,excecute commands, and retrieve data.
+		-ASP.NET web Applications
+		-Windows Applications
+		-Console Applications
+
+-> SqlConnection,
+	- SqlConnection and SqlCommand are classes of a connected architecture and found in the System.Data.SqlClient namespace.
+	- The SqlConnection class makes a connection with the database.this connection is used by the SqlCommand to work with that database. 
+	- SqlCommand class is used to execute the SQL statements. 
+	- Here,two important methods of SqlConnection.
+		-Open() : The open() method  is used to open the Database connection.
+		-Close() : The close() method is used to close the Database connection.
+
+-> ConnectionStrings in web.config configuration file,
+	-In an asp.net web application, the configuration strings can be stored in web.config file
+	-Use the ConnectionStrings property of the ConfigurationManager class to retrieve the connection string value from web.config. 
+	-ConfigurationManager class is present in System.Configuration namespace.
+
+-> SqlCommand,
+	-The main role of SqlCommand is to execute SQL statements.
+	-SqlCommand Properties,
+		-CommandText: The commandText property is used to set the SQL statement.
+		-Connection: This property is used to get connection to the database source which is specified in SqlConnection. 
+	-SqlCommand Method,
+		-ExecuteReader() : The ExecuteReader() method can return a set of records from a database. 
+		-ExecuteNonQuery() : The ExecuteNonQuery() method does not return any record.It only returns the number of affected rows.
+ 		-ExecuteScalar() : The ExecuteScalar() returns a single value from the database. Generally, it is used with an aggregate function.
+
+-> Sql injection and prevention,
+	-SQL Injection is a type of an injection attack that makes it possible to execute malicious SQL statements.
+	-These statements control a database server behind a web application. 
+	-The only sure way to prevent SQL Injection attacks is input validation and parametrized queries and stored procedure.
+
+-> SqlDataReader,
+	-The ADO.NET DataReader is used to retrieve read-only and forward-only data from a database. 
+	-Using of a DataReader increases application performance and reduces system overheads. This is due to one row at a time is stored in memory. 
+	-Instance of SqlDataReader cannot be created by using the new operator.
+	-The SqlCommand object's ExecuteReader() method creates and returns an instance of SqlDataReader.  
+	-The data is available as long as the connection with database exists.
+	-You need to open and close the connecton manually in code.
+
+-> SqlDataReader object's NextResult method,
+	-The NextResult() method returns true and advances to the next result-set. 
+	-The SqlDataReader object's Read() method is used to loop thru the rows in a given result set, where as the NextResult() method is used to loop thru multiple  result sets.
+
+-> SqlDataAdapter and DataSet,,
+	-SqlDataAdapter and Dataset provides us with disconnected data access model.
+	-The DataAdapter object serves as a conduit between the data source and the Dataset. 
+	-The DataAdapter knows about the DataSet and it knows how to populate it. 
+	-The Adapter also knows about the connection to the data source.
+	-DataAdapter.Fill Method,
+		-The Fill method retrieves rows from the data source using the SELECT statement specified by an associated SelectCommand property.
+		-Adds or refreshes rows in the DataSet to match those in the data source using the DataSet name, and creates a DataTable named "Table".
+->Also practice today's video from above concepts.
