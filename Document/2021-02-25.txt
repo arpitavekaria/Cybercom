@@ -1,0 +1,99 @@
+-> Today's task i watch and learn from today's ASP.net videos as per schedule given by,
+
+-> What is ASP.NET,
+	-ASP.NET is a Web application framework developed by Microsoft to build dynamic data driven Web applications and Web services. 
+		1. ASP.NET is a subset of .NET framework. In simple terms a framework is a collection of classes. 
+		2. ASP.NET is the successor to classic ASP (Active Server Pages).
+
+-> What is viewstate,
+	-ViewState data is serialized into base64-encoded strings, and is stored in Hidden input field __ViewState.
+	-To view this hidden input field, right click on the browser and select "View Page Source" for google chrome. In internet explorer, right click and select "View Source".
+
+-> Events in the life cycle of a web application,
+	-In a web application, events can occur at 3 levels
+		1. At the Application Level(Example: Application Start)
+		2. At the Page Level(Example: Page Load)
+		3. At the Control Level (Example: Button Click)
+
+-> Difference between ViewState, SessionState and ApplicationState,
+	-ViewState:
+		1. ViewState of a webform is available only with in that webform
+		2. ViewState is stored on the page in a hidden field called _ViewState. Because of this, the ViewState, will be lost, if you navigate awaya from the page, or if the broswer is closed.
+		3. ViewState is used by all asp.net controls to retain their state across postback
+	-Session State:
+		1. Session state variables are available across all pages, but only for a given single session. Session variables are like single-user global data.
+		2. Session state variables are stored on the web server.
+		3. SessionState variables are cleared, when the user session times out. The default is 20 minutes. This is configurable in web.config
+	-Application State:
+		1. Application State variables are available across all pages and across all sessions. Application State variables are like multi-user global data.
+		2. Application State variables are stored on the web server.
+		3. Application State variables are cleared, when the process hosting the application is restarted.
+	
+
+-> ASP.NET Page Life Cycle Events,
+		1.PreInit
+		2.Init 
+		3.InitComplete 
+		4.PreLoad 
+		5.Load 
+		6.Control Events
+		7.Load Complete
+		8.PreRender
+		9.PreRenderComplete
+		10.Unload 
+		11.Error 
+
+-> ASP.NET Server control events,
+	-Postback events - These events submit the Web page, immediately to the server for processing. Click event of a button control is an example for PostBack event.
+	-Cached events - These events are saved in the page’s view state to be processed when a postback event occurs. TextChanged event of TextBox control, and SelectedIndexChanged event of a DropDownList control are examples of cached events. Cached events can be converted into postback events, by setting the AutoPostBack property of the control to true.
+	-Validation events - These events occur on the client, before the page is posted back to the server. All validation controls use these type of events.
+
+-> IsPostBack,
+	-IsPostBack is a Page level property, that can be used to determine whether the page is being loaded in response to a client postback, or if it is being loaded and accessed for the first time.
+
+-> IIS - Internet Information Services and ASP.NET,
+	-IIS is a web server that can be used to run asp.net web applications.
+	-Visual Studio ships with a built-in web server. If you want to just build and test web applications on your machine, you don't need an IIS.
+	-Built-in web server will not serve requests to another computer. By default, visual studio uses the built-in web server.
+
+-> ASP.NET TextBox Control,
+	-The TextBox control is used to get the input from the user of the web application.
+	-Properties of a TextBox control,
+		-TextMode,Text ,MaxLength ,ReadOnly ,ToolTip ,Columns ,Height ,Width ,AutoPostBack.
+	-Events of TextBox:
+		-TextChanged- This event is fired, when the text is changed.
+	-Methods of a TextBox:
+		-Focus - Set input focus onto the control.
+
+-> ASP.NET Radio Button Control,
+	-Radio Button control is used, when you want the user to select only one option from the available choices.
+	-Properties,
+		-Checked ,Text ,TextAlign ,Group Name,AutoPostBack.
+	-Events:
+		-CheckedChanged - This event is fired when the checked status of the radio button control is changed.
+
+-> ASP.NET CheckBox Control,
+	-CheckBox Control is used, when you want the user to select more than one option from the available choices.
+	-Properties,
+		-Checked ,Text ,TextAlign ,AutoPostBack.
+	-Methods:Focus() 
+	-Events:CheckedChanged
+
+-> ASP.NET Button, LinkButton and ImageButton Controls,
+	1. Button - The Button control is used to display a push button. Use the Text property to change the Text on the Button control.
+	2. LinkButton - LinkButton displays the button like a HyperLink. Use the Text property to change the LinkText.
+	3. ImageButton - ImageButton provides the flexibility of associating an Image with the button, using the ImageURL property.
+
+-> Command Event of an asp.net button control,
+	-ASP.NET button control exposes 2 events - Click and Command events.
+	-Click event happens before the Command event. 
+	-The click event handler and the command event handlers, are attached to the respective Click and Command events in the HTML using onclick and oncommand attributes. 
+	-If you have multiple button controls on a webform, and if you want to programmatically determine which Button control is clicked, we can make use of Command event, along with CommandName and CommandArgument properties.
+
+-> Dropdownlist in asp.net,
+	-A DropDownList is a collection of ListItem objects.
+	-To add items to the DropDownList,
+		1. Adding items to the DropDownList control at design time using the HTML
+		2. Adding items to the DropDownList control at runtime using the code
+
+-> Also practice today's video from above concepts.
