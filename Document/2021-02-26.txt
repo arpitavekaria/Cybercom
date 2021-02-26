@@ -1,0 +1,50 @@
+-> Today's task i watch and learn from today's ASP.net videos as per schedule given by,
+
+-> Data bind asp.net dropdownlist with data from the database,
+-> Binding an asp.net dropdownlist with an XML file,
+-> Cascading dropdown in asp.net,
+
+-> Mapping virtual path to physical path using Server.MapPath method
+	-This method returns the physical path for a given virtual path. This method can be used in several different ways, depending on the characters that we use in the virtual path. 
+
+-> Retrieving selected item text, value and index of an asp.net dropdownlist,
+	1. Drag and drop a dropdownlist and a button control onto the webform
+	2. Copy and paste the following HTML on the webform.
+
+-> Asp.net checkboxlist control,
+	-if you want the user to select more than one option, then a CheckBoxList control can be used.
+
+-> Asp.net checkboxlist, select or deselect all list items,
+	1. Selecting a specific ListItem with-in a CheckBoxList control using SelectedValue and SelectedIndex properties
+	2. Selecting or De-Selecting all ListItems of a CheckBoxList control
+
+-> Asp.net ListBox control,
+	-ListBox control is very similar to DropDownList and CheckBoxList. Adding items and binding to a datasource is exactly similar.
+	-Properties:Rows ,SelectionMode
+
+-> Asp.net RadioButtonList Control,
+	-if you want the user to select only one option, then a RadioButtonList control can be used.
+
+-> Bulleted list in asp.net,
+	1. BulletedList is also a collection of ListItem objects.
+	2. Items can be added to the BulletedList in the HTML source or in the code behind file
+	3. BulletedList like any other list control supports databinding. For example, BulletedList can be bound to a database table or an xml file
+
+-> List controls in asp.net,
+	1. DropDownList
+	2. CheckBoxList
+	3. RadioButtonList
+	4. ListBox
+	5. BulletedList
+
+-> Fileupload control in asp.net,
+	-The fileUpload control only allows the user to select the file.
+
+-> Hidden field in asp.net,
+	-The HiddenField control is used to store a value that needs to be persisted across posts to the server, but you don't want the control or it's value visible to the user.
+
+-> UseSubmitBehavior property of the Button control,
+	-The UseSubmitBehavior property specifies if the Button control uses the browser's built-in submit function or the ASP.NET postback mechanism.
+
+-> Asp.net wizard control templates,
+-> Also practice today's video from above concepts.
