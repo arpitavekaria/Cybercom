@@ -1,0 +1,23 @@
+-> Today's task i watch and learn from today's ASP.net videos as per schedule given by,
+
+	-Literal control
+	-Asp.net panel control
+	-Creating controls dynamically using asp.net panel control
+	-RequiredField validator
+	-Rangevalidator
+	-CompareValidator 
+	-RegularExpressionValidator 
+	-CustomValidator 
+	-ValidationSummary 
+	-ValidationGroups 
+	-Different page navigation techniques 
+	-Response Redirect
+	-Server Transfer 
+	-Server execute
+	-Opening new window using javascript
+	-Techniques to send data from one webform to another in asp.net
+	-QueryString 
+	-Cookies 
+	-How to Check if cookies are enabled or disabled
+
+-> Also practice today's video from above concepts.
