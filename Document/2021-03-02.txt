@@ -1,0 +1,23 @@
+-> Today's task i watch and learn from today's ASP.net videos as per schedule given by,
+
+	-Asp.net session state,
+	-Cookie less sessions 
+	-Inporc asp.net session state mode management
+	-StateServer asp.net session state mode management
+	-SQLServer asp.net session state mode management
+	-Asp.net Application state
+	-Exception handling
+	-Error events
+	-Custom errors
+	-Windows event viewer
+	-Sending email
+	-Sending emails in asp.net using SMTP server settings from web config
+	-Tracing
+	-Application pools in IIS
+	-Applications isolation using application pools in IIS
+	-Application pools in IIS Security
+	-Anonymous authentication 
+	-User controls
+	-Adding using user controls on a webform
+
+-> Also practice today's video from above concepts.
