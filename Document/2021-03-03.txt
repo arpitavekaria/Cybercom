@@ -1,0 +1,22 @@
+-> Today's task i watch and learn from today's ASP.net videos as per schedule given by,
+
+	-Raising custom events from user controls
+	-Consuming user control custom events
+	-Loading user controls dynamically
+	-Loading controls dynamically
+	-Navigating to a specific month and an year in an asp.net calendar control
+	-Asp.net custom server controls
+	-Adding composite custom controls to visual studio tool box
+	-Adding properties to composite custom controls
+	-Solving the problems of asp net composite custom calendar control 
+	-Adding custom events to asp net composite custom control
+	-Assigning an image to the composite custom control in visual studio tool box
+	-Difference between user controls and custom controls 
+	-What is AutoEventWireup
+	-Add image slideshow to your website using asp net ajax and c#
+	-Display images in sequence in an image slideshow
+	-Provide capability to start and stop image slideshow
+	-Add images to slideshow using xml file
+	-Add images to slideshow using database table
+
+-> Also practice today's video from above concepts.
