@@ -1,0 +1,20 @@
+-> Today's task i watch and learn from today's ASP.net videos as per schedule given by,
+
+	-Asp.net calendar control
+	-Asp.net calendar control properties and events
+	-Windows authentication in asp.net
+	-Windows authentication and authorization in asp.net
+	-Anonymous authentication and asp.net impersonation 
+	-Windows authentication and folder level authorization
+	-Forms authentication using user names list in web.config
+	-Forms authentication in asp.net and user registration
+	-Forms authentication against users in database table
+	-Forms authentication and locking user accounts
+	-Unlocking the locked user accounts
+	-Implementing password reset link in asp.net 
+	-Implementing change password page in asp.net 
+	-Changing password by providing current password
+	-Unlocking the locked user accounts using a web page
+	-Implementing Enable button to unlock user accounts
+
+-> Also practice today's video from above concepts.
