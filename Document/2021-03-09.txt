@@ -1,0 +1,10 @@
+-> Today i rewatch and learn some of videos of asp.net and done practice,
+-> In Today,
+	-practice on recaptcha control and tried validation
+	-practice on topic add images to slideshow using xml file and Database table also,
+	-practice on upload and download files
+	-practice on creating an image gallery and opening image from gallery
+	-practice on creating a master page passing data from it and retrive data from database in gridview
+
+-> Also done some work related to project and tried some changes related to that.
+-> Also referred another videos and websites of asp.net series.
