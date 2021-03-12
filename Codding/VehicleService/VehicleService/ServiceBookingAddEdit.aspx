@@ -25,7 +25,7 @@
         <div class="form-group row">
             <label for="lblCustomerNo" class="col-sm-2 col-form-label">Customer Mobile No.</label>
             <div class="col-sm-10">
-                <asp:TextBox runat="server" ID="txtCustomerNo" CssClass="form-control" placeholder="Enter txtCustomerNo" />
+                <asp:TextBox runat="server" ID="txtCustomerNo" CssClass="form-control" placeholder="Enter CustomerNo" />
                 <asp:RequiredFieldValidator runat="server" ID="rfvCustomerNo" ControlToValidate="txtCustomerNo" Display="Dynamic" ErrorMessage="Enter txtCustomerNo" ForeColor="Red" ValidationGroup="rfvBooking" />
             </div>
         </div>
@@ -48,7 +48,7 @@
             </div>
             <label for="lblBookingSlot" class="col-sm-2 col-form-label">Booking Time Slot</label>
             <div class="col-sm-4">
-                <asp:DropDownList runat="server" AppendDataBoundItems="true" ID="ddlBookingSlot" CssClass="form-control" OnSelectedIndexChanged="ddlBookingSlot_SelectedIndexChanged">
+                <asp:DropDownList runat="server" AppendDataBoundItems="true" ID="ddlBookingSlot" CssClass="form-control">
                     <asp:ListItem Selected="false" runat="server" InitialValue="-1" Text="--Select Booking Slot--"></asp:ListItem>
                 </asp:DropDownList>
                 <asp:RequiredFieldValidator runat="server" ID="rfvBookingSlot" ControlToValidate="ddlBookingSlot" Display="Dynamic" ErrorMessage="Select BookingSlot" ForeColor="Red" ValidationGroup="rfvBooking" />

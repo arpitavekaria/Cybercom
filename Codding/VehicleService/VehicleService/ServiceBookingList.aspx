@@ -12,7 +12,7 @@
                     <br />
                     <div>
                         <asp:Label ID="lblMessage" runat="server"></asp:Label>
-                        <asp:HyperLink ID="hlServiceBookingAdd" runat="server" Text="Add New Book" NavigateUrl="~/ServiceBookingAddEdit.aspx" CssClass="btn btn-primary" />
+                        <asp:HyperLink ID="hlServiceBookingAdd" runat="server" Text="Add New Booking" NavigateUrl="~/ServiceBookingAddEdit.aspx" CssClass="btn btn-primary" />
                     </div>
                     <br /><hr />
                     <asp:GridView ID="gvServiceBooking" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered table-hover" OnRowCommand="gvServiceBooking_RowCommand">

@@ -197,21 +197,31 @@ namespace VehicleService
 
                         if (Request.QueryString["ServiceBookingID"] == null)
                         {
-                            objCmd.CommandText = "PR_ServiceBooking_Insert";
+                            objCmd.CommandText = "PR_ServiceBooking_InsertOnCondition";
+                            SqlParameter outputPara = new SqlParameter();
+                            outputPara.ParameterName = "@isExist";
+                            outputPara.Direction = System.Data.ParameterDirection.Output;
+                            outputPara.SqlDbType = System.Data.SqlDbType.Bit;
+                            objCmd.Parameters.Add(outputPara);
                             objCmd.ExecuteNonQuery();
-                            lblMessage.Text = "Data Inserted Successfully.....";
+                            string outValue = outputPara.Value.ToString();
+                            if (outValue == "1")
+                            {
+                                lblMessage.Text = "Data Inserted Successfully.....";
+                            }
+                            else
+                            {
+                                lblMessage.Text = "Record already Exists";
+                            }
                         }
                         else
                         {
                             objCmd.CommandText = "PR_ServiceBooking_UpdateByPK";
-
                             objCmd.Parameters.AddWithValue("@ServiceBookingID", Request.QueryString["ServiceBookingID"].ToString());
                             objCmd.ExecuteNonQuery();
                             lblMessage.Text = "Data Updated Successfully.....";
                         }
                         #endregion Prepare Command
-
-
                     }
                     catch (Exception ex)
                     {
