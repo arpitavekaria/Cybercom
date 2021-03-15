@@ -1,0 +1,14 @@
+-> Today i watch and learn from videos of asp.net MVC and done practice,
+
+	-Introduction to MVC
+	-Setting up environment
+	-Create default MVC 5 Application
+	-Understanding MVC 5 project architecture
+	-Controllers in MVC 5
+	-View in MVC 5
+	-Models in MVC 5
+	-Razor view asp.net MVC 5
+	-Loop in Razor view engine in MVC 5
+	-Inline HTML helpers in MVC 5
+
+-> Also referred another videos and websites of asp.net MVC series.
