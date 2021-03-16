@@ -1,0 +1,14 @@
+-> Today i watch and learn from videos of asp.net MVC and done practice,
+
+	-Standard HTML helpers
+	-Strongly type HTML helpers
+	-Templated HTML helpers
+	-Custom HTML helpers
+	-ViewBag and ViewData
+	-TempData 
+	-HTTP verbs
+	-Routing 
+	-Conventional Routing
+	-Attribute Routing
+
+-> Also referred websites of asp.net MVC series.
