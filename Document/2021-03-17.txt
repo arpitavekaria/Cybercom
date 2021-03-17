@@ -1,0 +1,16 @@
+-> Today i watch and learn from videos of asp.net MVC and done practice,
+
+	-Pass data from view to controller
+	-Validation in MVC in loosely binding
+	-Validation in MVC with strongly binding
+	-Validation Summary
+	-Custom Validation
+	-Layout 
+	-Multiple Layouts
+	-Section in Layout
+	-@RenderPage
+	-Entity framework 
+	-Save data in database	
+	-Save data using navigational property
+
+-> Also referred websites of asp.net MVC series.
