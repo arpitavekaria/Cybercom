@@ -1,0 +1,18 @@
+-> Today i watch and learn from videos of asp.net MVC Series,
+
+	-Get data from database
+	-Update data in database
+	-Delete records from database
+	-Managing EntityState in MVC
+	-Using jQuery in MVC
+	-Return JSON from MVC Controller
+	-Get data using ajax in mvc
+	-Post data using ajax in mvc
+	-Ajax helpers in MVC
+	-@Ajax.BeginForm in MVC
+	-Loader in Ajax helper in MVC
+	-@Ajax.ActionLink in MVC
+	-Partial view in mvc
+	-@Html.Partial vs @Html.RenderPartial
+
+-> Also done practice of asp.net MVC series.
