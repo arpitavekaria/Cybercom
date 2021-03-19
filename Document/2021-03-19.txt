@@ -1,0 +1,16 @@
+-> Today i watch and learn from videos of asp.net MVC Series,
+
+	-Filters in MVC 5
+	-OutputCache Filter in MVC 5
+	-Location in OutputCache Filter in MVC 5
+	-HandleError in MVC 5
+	-Html.raw in MVC 5
+	-XSS Attack, AllowHTML, ValidateInput in MVC 5
+	-Authentication and Authorization in mvc 
+	-Login, Signup and Logout in mvc
+	-AllowAnonymous in mvc
+	-Roles in MVC
+	-Role based Menu in MVC 5
+	-Identity framework in mvc 5
+
+-> Also done practice of asp.net MVC series.
