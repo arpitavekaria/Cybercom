@@ -1,0 +1,14 @@
+-> Today i watch and learn from videos of asp.net MVC Series,
+
+	-Custom Authentication filter in mvc 5
+	-Custom Action filter in mvc 5
+	-Custom Exception filter in mvc 5
+	-Area in mvc 5
+	-Routing in Area in mvc 5
+	-Bundling and Minification in MVC
+	-What is Model Binder in MVC
+	-Custom Model Binder in MVC
+	-MVC application life cycle
+	-Unit testing in MVC 5
+
+-> Also done practice of asp.net MVC series.
