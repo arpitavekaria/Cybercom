@@ -1,0 +1,8 @@
+-> Today i watch and learn from videos of asp.net MVC Series,
+
+	-Dependency Injection in MVC 5
+	-Web API in MVC 5 project 
+	-Async controller in MVC
+	-Deploy MVC application on IIS Server 
+
+-> Also done practice of asp.net MVC series.
