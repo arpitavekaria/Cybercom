@@ -1,0 +1,45 @@
+﻿@model IEnumerable<VehicleService.Model.VehicleModel>
+
+@{
+    ViewBag.Title = "VehicleList";
+}
+
+<br />
+
+<h2>VehicleList</h2>
+<hr />
+
+<p style="text-align: right">
+    @Html.ActionLink("Create New", "Create", new { Controller = "Vehicle" }, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th width="50px">
+            Sr No
+        </th>
+        <th>
+            Action
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleName)
+        </th>
+    </tr>
+    @{ int SrNo = 1;}
+    @foreach (var item in (IEnumerable<VehicleService.Model.VehicleModel>)ViewData["Vehicle"])
+    {
+        <tr>
+            <td>
+                @SrNo
+            </td>
+            @{ SrNo++; }
+            <td>
+                @Html.ActionLink("Edit", "Create", new { Controller = "Vehicle", id = item.VehicleID }, new { id = item.VehicleID, @class = "btn btn-primary" })
+                @Html.ActionLink("Delete", "Delete", new { Controller = "Vehicle", id = item.VehicleID }, new { @class = "btn btn-danger" })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehicleName)
+            </td>
+        </tr>
+    }
+
+</table>

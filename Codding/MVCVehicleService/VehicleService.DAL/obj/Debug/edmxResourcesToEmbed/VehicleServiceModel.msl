@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VehicleServiceModelStoreContainer" CdmEntityContainer="VehicleServiceEntities">
+    <EntitySetMapping Name="BookingSlot">
+      <EntityTypeMapping TypeName="VehicleServiceModel.BookingSlot">
+        <MappingFragment StoreEntitySet="BookingSlot">
+          <ScalarProperty Name="BookingSlotID" ColumnName="BookingSlotID" />
+          <ScalarProperty Name="BookingSlotTime" ColumnName="BookingSlotTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceBooking">
+      <EntityTypeMapping TypeName="VehicleServiceModel.ServiceBooking">
+        <MappingFragment StoreEntitySet="ServiceBooking">
+          <ScalarProperty Name="ServiceBookingID" ColumnName="ServiceBookingID" />
+          <ScalarProperty Name="VehicleID" ColumnName="VehicleID" />
+          <ScalarProperty Name="BookingSlotID" ColumnName="BookingSlotID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerNo" ColumnName="CustomerNo" />
+          <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehicle">
+      <EntityTypeMapping TypeName="VehicleServiceModel.Vehicle">
+        <MappingFragment StoreEntitySet="Vehicle">
+          <ScalarProperty Name="VehicleID" ColumnName="VehicleID" />
+          <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="PR_BookingSlot_SelectDropdownList" FunctionName="VehicleServiceModel.Store.PR_BookingSlot_SelectDropdownList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="VehicleServiceModel.PR_BookingSlot_SelectDropdownList_Result">
+          <ScalarProperty Name="BookingSlotID" ColumnName="BookingSlotID" />
+          <ScalarProperty Name="BookingSlotTime" ColumnName="BookingSlotTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PR_ServiceBooking_DeleteBYPK" FunctionName="VehicleServiceModel.Store.PR_ServiceBooking_DeleteBYPK" />
+    <FunctionImportMapping FunctionImportName="PR_ServiceBooking_Insert" FunctionName="VehicleServiceModel.Store.PR_ServiceBooking_Insert" />
+    <FunctionImportMapping FunctionImportName="PR_ServiceBooking_InsertOnCondition" FunctionName="VehicleServiceModel.Store.PR_ServiceBooking_InsertOnCondition" />
+    <FunctionImportMapping FunctionImportName="PR_ServiceBooking_SelectAll" FunctionName="VehicleServiceModel.Store.PR_ServiceBooking_SelectAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="VehicleServiceModel.PR_ServiceBooking_SelectAll_Result">
+          <ScalarProperty Name="ServiceBookingID" ColumnName="ServiceBookingID" />
+          <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+          <ScalarProperty Name="BookingSlotTime" ColumnName="BookingSlotTime" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerNo" ColumnName="CustomerNo" />
+          <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PR_ServiceBooking_SelectByCondition" FunctionName="VehicleServiceModel.Store.PR_ServiceBooking_SelectByCondition" />
+    <FunctionImportMapping FunctionImportName="PR_ServiceBooking_SelectByPK" FunctionName="VehicleServiceModel.Store.PR_ServiceBooking_SelectByPK">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="VehicleServiceModel.PR_ServiceBooking_SelectByPK_Result">
+          <ScalarProperty Name="ServiceBookingID" ColumnName="ServiceBookingID" />
+          <ScalarProperty Name="VehicleID" ColumnName="VehicleID" />
+          <ScalarProperty Name="BookingSlotID" ColumnName="BookingSlotID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerNo" ColumnName="CustomerNo" />
+          <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PR_ServiceBooking_UpdateByPK" FunctionName="VehicleServiceModel.Store.PR_ServiceBooking_UpdateByPK" />
+    <FunctionImportMapping FunctionImportName="PR_Vehicle_DeleteBYPK" FunctionName="VehicleServiceModel.Store.PR_Vehicle_DeleteBYPK" />
+    <FunctionImportMapping FunctionImportName="PR_Vehicle_Insert" FunctionName="VehicleServiceModel.Store.PR_Vehicle_Insert" />
+    <FunctionImportMapping FunctionImportName="PR_Vehicle_SelectAll" FunctionName="VehicleServiceModel.Store.PR_Vehicle_SelectAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="VehicleServiceModel.PR_Vehicle_SelectAll_Result">
+          <ScalarProperty Name="VehicleID" ColumnName="VehicleID" />
+          <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PR_Vehicle_SelectByPK" FunctionName="VehicleServiceModel.Store.PR_Vehicle_SelectByPK">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="VehicleServiceModel.PR_Vehicle_SelectByPK_Result">
+          <ScalarProperty Name="VehicleID" ColumnName="VehicleID" />
+          <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PR_Vehicle_SelectDropdownList" FunctionName="VehicleServiceModel.Store.PR_Vehicle_SelectDropdownList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="VehicleServiceModel.PR_Vehicle_SelectDropdownList_Result">
+          <ScalarProperty Name="VehicleID" ColumnName="VehicleID" />
+          <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PR_Vehicle_UpdateByPK" FunctionName="VehicleServiceModel.Store.PR_Vehicle_UpdateByPK" />
+  </EntityContainerMapping>
+</Mapping>

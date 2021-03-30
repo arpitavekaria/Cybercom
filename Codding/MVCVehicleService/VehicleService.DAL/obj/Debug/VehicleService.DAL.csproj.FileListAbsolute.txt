@@ -1,0 +1,14 @@
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.DAL\bin\Debug\VehicleService.DAL.dll.config
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.DAL\bin\Debug\VehicleService.DAL.dll
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.DAL\bin\Debug\VehicleService.DAL.pdb
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.DAL\bin\Debug\VehicleService.Model.dll
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.DAL\bin\Debug\VehicleService.Model.pdb
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.DAL\obj\Debug\VehicleService.DAL.csprojAssemblyReference.cache
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.DAL\obj\Debug\VehicleService.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.DAL\obj\Debug\VehicleService.DAL.csproj.CopyComplete
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.DAL\obj\Debug\VehicleService.DAL.dll
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.DAL\obj\Debug\VehicleService.DAL.pdb

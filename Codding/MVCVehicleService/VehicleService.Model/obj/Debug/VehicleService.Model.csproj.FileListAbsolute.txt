@@ -1,0 +1,5 @@
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.Model\bin\Debug\VehicleService.Model.dll
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.Model\bin\Debug\VehicleService.Model.pdb
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.Model\obj\Debug\VehicleService.Model.csproj.CoreCompileInputs.cache
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.Model\obj\Debug\VehicleService.Model.dll
+C:\Users\Arpita\source\repos\MVCVehicleService\VehicleService.Model\obj\Debug\VehicleService.Model.pdb

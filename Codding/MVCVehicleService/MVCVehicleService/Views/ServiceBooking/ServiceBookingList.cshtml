@@ -1,0 +1,71 @@
+﻿@model IEnumerable<VehicleService.Model.ServiceBookingModel>
+
+@{
+    ViewBag.Title = "ServiceBooking List";
+}
+
+<br />
+
+<h2>Create</h2>
+<hr />
+
+<p style="text-align: right">
+    @Html.ActionLink("Create New", "Create", new { Controller = "ServiceBooking" }, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Sr No
+        </th>
+        <th>
+            Action
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RegistrationNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookingSlotTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleName)
+        </th>
+    </tr>
+
+    @{ int SrNo = 1;}
+
+    @foreach (var item in (IEnumerable<VehicleService.Model.ServiceBookingModel>)ViewData["ServiceBooking"])
+    {
+        <tr>
+            <td>
+                @SrNo
+            </td>
+            @{ SrNo++; }
+            <td>
+                @Html.ActionLink("Edit", "Create", new { Controller = "ServiceBooking", id = item.ServiceBookingID }, new { id = item.ServiceBookingID, @class = "btn btn-primary" })
+                @Html.ActionLink("Delete", "Delete", new { Controller = "ServiceBooking", id = item.ServiceBookingID }, new { @class = "btn btn-danger" })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegistrationNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookingSlotTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehicleName)
+            </td>
+        </tr>
+    }
+
+</table>

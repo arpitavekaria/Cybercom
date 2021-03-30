@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VehicleServiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BookingSlot">
+    <Key>
+      <PropertyRef Name="BookingSlotID" />
+    </Key>
+    <Property Name="BookingSlotID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookingSlotTime" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ServiceBooking">
+    <Key>
+      <PropertyRef Name="ServiceBookingID" />
+    </Key>
+    <Property Name="ServiceBookingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VehicleID" Type="int" />
+    <Property Name="BookingSlotID" Type="int" />
+    <Property Name="CustomerName" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerNo" Type="varchar" MaxLength="10" />
+    <Property Name="RegistrationNo" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Vehicle">
+    <Key>
+      <PropertyRef Name="VehicleID" />
+    </Key>
+    <Property Name="VehicleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VehicleName" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ServiceBooking_BookingSlot">
+    <End Role="BookingSlot" Type="Self.BookingSlot" Multiplicity="0..1" />
+    <End Role="ServiceBooking" Type="Self.ServiceBooking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BookingSlot">
+        <PropertyRef Name="BookingSlotID" />
+      </Principal>
+      <Dependent Role="ServiceBooking">
+        <PropertyRef Name="BookingSlotID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceBooking_Vehicle">
+    <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="0..1" />
+    <End Role="ServiceBooking" Type="Self.ServiceBooking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="VehicleID" />
+      </Principal>
+      <Dependent Role="ServiceBooking">
+        <PropertyRef Name="VehicleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="PR_BookingSlot_SelectDropdownList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="PR_ServiceBooking_DeleteBYPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ServiceBookingID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PR_ServiceBooking_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="VehicleID" Type="int" Mode="In" />
+    <Parameter Name="BookingSlotID" Type="int" Mode="In" />
+    <Parameter Name="CustomerName" Type="varchar" Mode="In" />
+    <Parameter Name="CustomerNo" Type="varchar" Mode="In" />
+    <Parameter Name="RegistrationNo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PR_ServiceBooking_InsertOnCondition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="VehicleID" Type="int" Mode="In" />
+    <Parameter Name="BookingSlotID" Type="int" Mode="In" />
+    <Parameter Name="CustomerName" Type="varchar" Mode="In" />
+    <Parameter Name="CustomerNo" Type="varchar" Mode="In" />
+    <Parameter Name="RegistrationNo" Type="varchar" Mode="In" />
+    <Parameter Name="isExist" Type="bit" Mode="InOut" />
+  </Function>
+  <Function Name="PR_ServiceBooking_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="PR_ServiceBooking_SelectByCondition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BookingSlotID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PR_ServiceBooking_SelectByPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ServiceBookingID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PR_ServiceBooking_UpdateByPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ServiceBookingID" Type="int" Mode="In" />
+    <Parameter Name="VehicleID" Type="int" Mode="In" />
+    <Parameter Name="BookingSlotID" Type="int" Mode="In" />
+    <Parameter Name="CustomerName" Type="varchar" Mode="In" />
+    <Parameter Name="CustomerNo" Type="varchar" Mode="In" />
+    <Parameter Name="RegistrationNo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PR_Vehicle_DeleteBYPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="VehicleID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PR_Vehicle_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="VehicleName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PR_Vehicle_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="PR_Vehicle_SelectByPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="VehicleID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PR_Vehicle_SelectDropdownList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="PR_Vehicle_UpdateByPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="VehicleID" Type="int" Mode="In" />
+    <Parameter Name="VehicleName" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="VehicleServiceModelStoreContainer">
+    <EntitySet Name="BookingSlot" EntityType="Self.BookingSlot" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServiceBooking" EntityType="Self.ServiceBooking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vehicle" EntityType="Self.Vehicle" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ServiceBooking_BookingSlot" Association="Self.FK_ServiceBooking_BookingSlot">
+      <End Role="BookingSlot" EntitySet="BookingSlot" />
+      <End Role="ServiceBooking" EntitySet="ServiceBooking" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceBooking_Vehicle" Association="Self.FK_ServiceBooking_Vehicle">
+      <End Role="Vehicle" EntitySet="Vehicle" />
+      <End Role="ServiceBooking" EntitySet="ServiceBooking" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

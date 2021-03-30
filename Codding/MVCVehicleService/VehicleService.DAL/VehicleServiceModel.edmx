@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="VehicleServiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BookingSlot">
+          <Key>
+            <PropertyRef Name="BookingSlotID" />
+          </Key>
+          <Property Name="BookingSlotID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BookingSlotTime" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ServiceBooking">
+          <Key>
+            <PropertyRef Name="ServiceBookingID" />
+          </Key>
+          <Property Name="ServiceBookingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VehicleID" Type="int" />
+          <Property Name="BookingSlotID" Type="int" />
+          <Property Name="CustomerName" Type="varchar" MaxLength="50" />
+          <Property Name="CustomerNo" Type="varchar" MaxLength="10" />
+          <Property Name="RegistrationNo" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Vehicle">
+          <Key>
+            <PropertyRef Name="VehicleID" />
+          </Key>
+          <Property Name="VehicleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VehicleName" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ServiceBooking_BookingSlot">
+          <End Role="BookingSlot" Type="Self.BookingSlot" Multiplicity="0..1" />
+          <End Role="ServiceBooking" Type="Self.ServiceBooking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BookingSlot">
+              <PropertyRef Name="BookingSlotID" />
+            </Principal>
+            <Dependent Role="ServiceBooking">
+              <PropertyRef Name="BookingSlotID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceBooking_Vehicle">
+          <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="0..1" />
+          <End Role="ServiceBooking" Type="Self.ServiceBooking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vehicle">
+              <PropertyRef Name="VehicleID" />
+            </Principal>
+            <Dependent Role="ServiceBooking">
+              <PropertyRef Name="VehicleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="PR_BookingSlot_SelectDropdownList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="PR_ServiceBooking_DeleteBYPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ServiceBookingID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="PR_ServiceBooking_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="VehicleID" Type="int" Mode="In" />
+          <Parameter Name="BookingSlotID" Type="int" Mode="In" />
+          <Parameter Name="CustomerName" Type="varchar" Mode="In" />
+          <Parameter Name="CustomerNo" Type="varchar" Mode="In" />
+          <Parameter Name="RegistrationNo" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="PR_ServiceBooking_InsertOnCondition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="VehicleID" Type="int" Mode="In" />
+          <Parameter Name="BookingSlotID" Type="int" Mode="In" />
+          <Parameter Name="CustomerName" Type="varchar" Mode="In" />
+          <Parameter Name="CustomerNo" Type="varchar" Mode="In" />
+          <Parameter Name="RegistrationNo" Type="varchar" Mode="In" />
+          <Parameter Name="isExist" Type="bit" Mode="InOut" />
+        </Function>
+        <Function Name="PR_ServiceBooking_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="PR_ServiceBooking_SelectByCondition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BookingSlotID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="PR_ServiceBooking_SelectByPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ServiceBookingID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="PR_ServiceBooking_UpdateByPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ServiceBookingID" Type="int" Mode="In" />
+          <Parameter Name="VehicleID" Type="int" Mode="In" />
+          <Parameter Name="BookingSlotID" Type="int" Mode="In" />
+          <Parameter Name="CustomerName" Type="varchar" Mode="In" />
+          <Parameter Name="CustomerNo" Type="varchar" Mode="In" />
+          <Parameter Name="RegistrationNo" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="PR_Vehicle_DeleteBYPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="VehicleID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="PR_Vehicle_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="VehicleName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="PR_Vehicle_SelectAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="PR_Vehicle_SelectByPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="VehicleID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="PR_Vehicle_SelectDropdownList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="PR_Vehicle_UpdateByPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="VehicleID" Type="int" Mode="In" />
+          <Parameter Name="VehicleName" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="VehicleServiceModelStoreContainer">
+          <EntitySet Name="BookingSlot" EntityType="Self.BookingSlot" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceBooking" EntityType="Self.ServiceBooking" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vehicle" EntityType="Self.Vehicle" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ServiceBooking_BookingSlot" Association="Self.FK_ServiceBooking_BookingSlot">
+            <End Role="BookingSlot" EntitySet="BookingSlot" />
+            <End Role="ServiceBooking" EntitySet="ServiceBooking" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceBooking_Vehicle" Association="Self.FK_ServiceBooking_Vehicle">
+            <End Role="Vehicle" EntitySet="Vehicle" />
+            <End Role="ServiceBooking" EntitySet="ServiceBooking" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VehicleServiceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BookingSlot">
+          <Key>
+            <PropertyRef Name="BookingSlotID" />
+          </Key>
+          <Property Name="BookingSlotID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BookingSlotTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ServiceBooking" Relationship="Self.FK_ServiceBooking_BookingSlot" FromRole="BookingSlot" ToRole="ServiceBooking" />
+        </EntityType>
+        <EntityType Name="ServiceBooking">
+          <Key>
+            <PropertyRef Name="ServiceBookingID" />
+          </Key>
+          <Property Name="ServiceBookingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VehicleID" Type="Int32" />
+          <Property Name="BookingSlotID" Type="Int32" />
+          <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CustomerNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="RegistrationNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BookingSlot" Relationship="Self.FK_ServiceBooking_BookingSlot" FromRole="ServiceBooking" ToRole="BookingSlot" />
+          <NavigationProperty Name="Vehicle" Relationship="Self.FK_ServiceBooking_Vehicle" FromRole="ServiceBooking" ToRole="Vehicle" />
+        </EntityType>
+        <EntityType Name="Vehicle">
+          <Key>
+            <PropertyRef Name="VehicleID" />
+          </Key>
+          <Property Name="VehicleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VehicleName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="ServiceBooking" Relationship="Self.FK_ServiceBooking_Vehicle" FromRole="Vehicle" ToRole="ServiceBooking" />
+        </EntityType>
+        <Association Name="FK_ServiceBooking_BookingSlot">
+          <End Role="BookingSlot" Type="Self.BookingSlot" Multiplicity="0..1" />
+          <End Role="ServiceBooking" Type="Self.ServiceBooking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BookingSlot">
+              <PropertyRef Name="BookingSlotID" />
+            </Principal>
+            <Dependent Role="ServiceBooking">
+              <PropertyRef Name="BookingSlotID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceBooking_Vehicle">
+          <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="0..1" />
+          <End Role="ServiceBooking" Type="Self.ServiceBooking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vehicle">
+              <PropertyRef Name="VehicleID" />
+            </Principal>
+            <Dependent Role="ServiceBooking">
+              <PropertyRef Name="VehicleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="VehicleServiceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BookingSlot" EntityType="Self.BookingSlot" />
+          <EntitySet Name="ServiceBooking" EntityType="Self.ServiceBooking" />
+          <EntitySet Name="Vehicle" EntityType="Self.Vehicle" />
+          <AssociationSet Name="FK_ServiceBooking_BookingSlot" Association="Self.FK_ServiceBooking_BookingSlot">
+            <End Role="BookingSlot" EntitySet="BookingSlot" />
+            <End Role="ServiceBooking" EntitySet="ServiceBooking" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceBooking_Vehicle" Association="Self.FK_ServiceBooking_Vehicle">
+            <End Role="Vehicle" EntitySet="Vehicle" />
+            <End Role="ServiceBooking" EntitySet="ServiceBooking" />
+          </AssociationSet>
+          <FunctionImport Name="PR_BookingSlot_SelectDropdownList" ReturnType="Collection(VehicleServiceModel.PR_BookingSlot_SelectDropdownList_Result)" />
+          <FunctionImport Name="PR_ServiceBooking_DeleteBYPK">
+            <Parameter Name="ServiceBookingID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PR_ServiceBooking_Insert">
+            <Parameter Name="VehicleID" Mode="In" Type="Int32" />
+            <Parameter Name="BookingSlotID" Mode="In" Type="Int32" />
+            <Parameter Name="CustomerName" Mode="In" Type="String" />
+            <Parameter Name="CustomerNo" Mode="In" Type="String" />
+            <Parameter Name="RegistrationNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="PR_ServiceBooking_InsertOnCondition">
+            <Parameter Name="VehicleID" Mode="In" Type="Int32" />
+            <Parameter Name="BookingSlotID" Mode="In" Type="Int32" />
+            <Parameter Name="CustomerName" Mode="In" Type="String" />
+            <Parameter Name="CustomerNo" Mode="In" Type="String" />
+            <Parameter Name="RegistrationNo" Mode="In" Type="String" />
+            <Parameter Name="isExist" Mode="InOut" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="PR_ServiceBooking_SelectAll" ReturnType="Collection(VehicleServiceModel.PR_ServiceBooking_SelectAll_Result)" />
+          <FunctionImport Name="PR_ServiceBooking_SelectByCondition" ReturnType="Collection(Int32)">
+            <Parameter Name="BookingSlotID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PR_ServiceBooking_SelectByPK" ReturnType="Collection(VehicleServiceModel.PR_ServiceBooking_SelectByPK_Result)">
+            <Parameter Name="ServiceBookingID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PR_ServiceBooking_UpdateByPK">
+            <Parameter Name="ServiceBookingID" Mode="In" Type="Int32" />
+            <Parameter Name="VehicleID" Mode="In" Type="Int32" />
+            <Parameter Name="BookingSlotID" Mode="In" Type="Int32" />
+            <Parameter Name="CustomerName" Mode="In" Type="String" />
+            <Parameter Name="CustomerNo" Mode="In" Type="String" />
+            <Parameter Name="RegistrationNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="PR_Vehicle_DeleteBYPK">
+            <Parameter Name="VehicleID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PR_Vehicle_Insert">
+            <Parameter Name="VehicleName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="PR_Vehicle_SelectAll" ReturnType="Collection(VehicleServiceModel.PR_Vehicle_SelectAll_Result)" />
+          <FunctionImport Name="PR_Vehicle_SelectByPK" ReturnType="Collection(VehicleServiceModel.PR_Vehicle_SelectByPK_Result)">
+            <Parameter Name="VehicleID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PR_Vehicle_SelectDropdownList" ReturnType="Collection(VehicleServiceModel.PR_Vehicle_SelectDropdownList_Result)" />
+          <FunctionImport Name="PR_Vehicle_UpdateByPK">
+            <Parameter Name="VehicleID" Mode="In" Type="Int32" />
+            <Parameter Name="VehicleName" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="PR_BookingSlot_SelectDropdownList_Result">
+          <Property Type="Int32" Name="BookingSlotID" Nullable="false" />
+          <Property Type="String" Name="BookingSlotTime" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="PR_ServiceBooking_SelectAll_Result">
+          <Property Type="Int32" Name="ServiceBookingID" Nullable="false" />
+          <Property Type="String" Name="VehicleName" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="BookingSlotTime" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CustomerNo" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="RegistrationNo" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="PR_ServiceBooking_SelectByPK_Result">
+          <Property Type="Int32" Name="ServiceBookingID" Nullable="false" />
+          <Property Type="Int32" Name="VehicleID" Nullable="true" />
+          <Property Type="Int32" Name="BookingSlotID" Nullable="true" />
+          <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CustomerNo" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="RegistrationNo" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="PR_Vehicle_SelectAll_Result">
+          <Property Type="Int32" Name="VehicleID" Nullable="false" />
+          <Property Type="String" Name="VehicleName" Nullable="false" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="PR_Vehicle_SelectByPK_Result">
+          <Property Type="Int32" Name="VehicleID" Nullable="false" />
+          <Property Type="String" Name="VehicleName" Nullable="false" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="PR_Vehicle_SelectDropdownList_Result">
+          <Property Type="Int32" Name="VehicleID" Nullable="false" />
+          <Property Type="String" Name="VehicleName" Nullable="false" MaxLength="20" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VehicleServiceModelStoreContainer" CdmEntityContainer="VehicleServiceEntities">
+          <EntitySetMapping Name="BookingSlot">
+            <EntityTypeMapping TypeName="VehicleServiceModel.BookingSlot">
+              <MappingFragment StoreEntitySet="BookingSlot">
+                <ScalarProperty Name="BookingSlotID" ColumnName="BookingSlotID" />
+                <ScalarProperty Name="BookingSlotTime" ColumnName="BookingSlotTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceBooking">
+            <EntityTypeMapping TypeName="VehicleServiceModel.ServiceBooking">
+              <MappingFragment StoreEntitySet="ServiceBooking">
+                <ScalarProperty Name="ServiceBookingID" ColumnName="ServiceBookingID" />
+                <ScalarProperty Name="VehicleID" ColumnName="VehicleID" />
+                <ScalarProperty Name="BookingSlotID" ColumnName="BookingSlotID" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CustomerNo" ColumnName="CustomerNo" />
+                <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vehicle">
+            <EntityTypeMapping TypeName="VehicleServiceModel.Vehicle">
+              <MappingFragment StoreEntitySet="Vehicle">
+                <ScalarProperty Name="VehicleID" ColumnName="VehicleID" />
+                <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="PR_BookingSlot_SelectDropdownList" FunctionName="VehicleServiceModel.Store.PR_BookingSlot_SelectDropdownList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VehicleServiceModel.PR_BookingSlot_SelectDropdownList_Result">
+                <ScalarProperty Name="BookingSlotID" ColumnName="BookingSlotID" />
+                <ScalarProperty Name="BookingSlotTime" ColumnName="BookingSlotTime" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PR_ServiceBooking_DeleteBYPK" FunctionName="VehicleServiceModel.Store.PR_ServiceBooking_DeleteBYPK" />
+          <FunctionImportMapping FunctionImportName="PR_ServiceBooking_Insert" FunctionName="VehicleServiceModel.Store.PR_ServiceBooking_Insert" />
+          <FunctionImportMapping FunctionImportName="PR_ServiceBooking_InsertOnCondition" FunctionName="VehicleServiceModel.Store.PR_ServiceBooking_InsertOnCondition" />
+          <FunctionImportMapping FunctionImportName="PR_ServiceBooking_SelectAll" FunctionName="VehicleServiceModel.Store.PR_ServiceBooking_SelectAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VehicleServiceModel.PR_ServiceBooking_SelectAll_Result">
+                <ScalarProperty Name="ServiceBookingID" ColumnName="ServiceBookingID" />
+                <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+                <ScalarProperty Name="BookingSlotTime" ColumnName="BookingSlotTime" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CustomerNo" ColumnName="CustomerNo" />
+                <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PR_ServiceBooking_SelectByCondition" FunctionName="VehicleServiceModel.Store.PR_ServiceBooking_SelectByCondition" />
+          <FunctionImportMapping FunctionImportName="PR_ServiceBooking_SelectByPK" FunctionName="VehicleServiceModel.Store.PR_ServiceBooking_SelectByPK">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VehicleServiceModel.PR_ServiceBooking_SelectByPK_Result">
+                <ScalarProperty Name="ServiceBookingID" ColumnName="ServiceBookingID" />
+                <ScalarProperty Name="VehicleID" ColumnName="VehicleID" />
+                <ScalarProperty Name="BookingSlotID" ColumnName="BookingSlotID" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CustomerNo" ColumnName="CustomerNo" />
+                <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PR_ServiceBooking_UpdateByPK" FunctionName="VehicleServiceModel.Store.PR_ServiceBooking_UpdateByPK" />
+          <FunctionImportMapping FunctionImportName="PR_Vehicle_DeleteBYPK" FunctionName="VehicleServiceModel.Store.PR_Vehicle_DeleteBYPK" />
+          <FunctionImportMapping FunctionImportName="PR_Vehicle_Insert" FunctionName="VehicleServiceModel.Store.PR_Vehicle_Insert" />
+          <FunctionImportMapping FunctionImportName="PR_Vehicle_SelectAll" FunctionName="VehicleServiceModel.Store.PR_Vehicle_SelectAll">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VehicleServiceModel.PR_Vehicle_SelectAll_Result">
+                <ScalarProperty Name="VehicleID" ColumnName="VehicleID" />
+                <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PR_Vehicle_SelectByPK" FunctionName="VehicleServiceModel.Store.PR_Vehicle_SelectByPK">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VehicleServiceModel.PR_Vehicle_SelectByPK_Result">
+                <ScalarProperty Name="VehicleID" ColumnName="VehicleID" />
+                <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PR_Vehicle_SelectDropdownList" FunctionName="VehicleServiceModel.Store.PR_Vehicle_SelectDropdownList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VehicleServiceModel.PR_Vehicle_SelectDropdownList_Result">
+                <ScalarProperty Name="VehicleID" ColumnName="VehicleID" />
+                <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PR_Vehicle_UpdateByPK" FunctionName="VehicleServiceModel.Store.PR_Vehicle_UpdateByPK" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
