@@ -1,0 +1,60 @@
+-> In this week i watch and learn from videos of Angular Series,
+
+	-Introduction to Angular
+
+	-TypeScript fundamentals
+		-Types
+		-Types assertions
+		-Arrow function
+		-Interface
+		-Classes
+		-Objects
+		-Constructor
+		-Access Modifier
+		-Properties
+		-Modules
+
+	-Angular Fundamentals
+		-Building blocks of angular
+		-Components
+		-Templates
+		-Directives
+		-Services
+		-Dependency Injection
+
+	-Displaying Data and Handle Events
+		-Property Binding
+		-Attribute Binding
+		-Class Binding
+		-Style Binding
+		-Event Binding
+		-Template Variables
+		-Two-way Binding
+		-Pipes
+		-Custom Pipes
+
+	-Building Reusable Components 
+		-Components API
+		-Input Properties
+		-Aliasing Input Properties
+		-Output Properties
+		-Aliasing Output Properties
+		-Passing Event Data
+		-Templates
+		-Styles
+		-View Encapsulation
+		-ngContent
+		-ngContainer
+
+	-Directive
+		-ngIf
+		-ngFor
+		-hidden property
+		-ngSwitchCase
+		-ngFor and change detection
+		-ngFor and trackBy
+		-ngClass
+		-ngStyle
+		-Custom Directives
+
+-> Also explored some other videos on youtube and website for more references and done practice of this Angular Series.
