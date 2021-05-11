@@ -1,0 +1,95 @@
+<app-navbar></app-navbar>
+<div class="row">
+    <div class="col-md-6 offset-3">
+      <form class="text-center border border-light p-5" [formGroup] = "productForm" (ngSubmit)="onSubmit()">
+        <p class="h4 mb-4">Product Details</p>
+  
+
+          <div class="row">
+            <div class="col-md-4">
+              <h5>Product Name</h5>
+            </div>
+            <div class="col-md-8">
+
+              <!-- Product name -->
+              <input
+                type="text"
+                class="form-control mb-4"
+                placeholder="Enter Product Name"
+                formControlName="ProductName"
+              />
+              <div *ngIf="_form.ProductName?.touched && _form.ProductName?.invalid" class="alert alert-danger">
+                    <div *ngIf="_form.ProductName?.errors?.required">Please Enter Product Name</div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <h5>Stock Available</h5>
+            </div>
+            <div class="col-md-8">
+
+              <!-- Stock -->
+                <input
+                type="text"
+                class="form-control mb-4"
+                placeholder="Enter Stock Quantity"
+                formControlName="Stock"
+              />
+              <div *ngIf="_form.Stock?.touched && _form.Stock?.invalid" class="alert alert-danger">
+                <div *ngIf="_form.Stock?.errors?.required">Please Enter Stock</div>
+              </div>
+              <div *ngIf="_form.Stock?.errors?.pattern"  class="alert alert-danger"> Stock should be numeric </div>
+
+            </div>
+          </div>
+
+        
+          <div class="row">
+            <div class="col-md-4">
+              <h5>Price Amount</h5>
+            </div>
+            <div class="col-md-8">
+              <!-- Price -->
+                <input
+                type="text"
+                class="form-control  mb-4"
+                placeholder="Enter Price Amount"
+                formControlName="Price"  
+                />
+                <div *ngIf="_form.Price?.touched && _form.Price?.invalid" class="alert alert-danger">
+                  <div *ngIf="_form.Price?.errors?.required">Please Enter Price</div>
+                </div>
+                <div *ngIf="_form.Price?.errors?.pattern" class="alert alert-danger"> Price should be numeric</div>
+
+            </div>
+          </div>
+            
+              <button
+                class="btn btn-info my-4 btn-block waves-effect waves-light"
+                [disabled]="!productForm.valid"
+                type="submit"
+              >
+              <ng-container *ngIf="isAddMode; then Add else Update"></ng-container>
+              <ng-template #Add>
+                Add Product
+              </ng-template>
+              <ng-template #Update>
+                Update Product
+              </ng-template>
+              </button>
+      
+            <hr />
+  
+         </form>
+
+          <button
+          class="btn btn-success my-4 btn-block waves-effect waves-light" routerLink="/product"
+        >
+          Back to Customer List
+        </button>
+    </div>
+  </div>
+  

@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+<h2 style="text-align: center;">Customer List</h2>
+  <hr>
+  <br>
+<div class="container">
+    
+    <div class="row">
+      <!-- <div class="col-md-8 mb-4">
+        <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm">
+      </div> -->
+        <div class="col-md-12 mb-4 bg-light text-right">
+            <button type="button" class="btn btn-primary btn-lg" routerLink="/customer/add"><i class="fas fa-plus"></i>&nbsp;Add new customer</button>
+        </div>
+        
+    </div>
+    <input type="text" class="form-control mb-4" id="CustomerName" placeholder="Search Customer Name" (keyup)="searchCustomer($event)">
+</div>
+
+<div *ngIf="showLoader else loaded" class="mt-5 text-center">
+  <img src="https://chickenrecipeseasy.top/images/loader.gif" />
+</div>
+
+<ng-template #loaded>
+<table class="table table-hover" style="font-size: 13px;">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers | paginate: { id: 'pagination', itemsPerPage: itemsPerPage, 
+      currentPage: page, totalItems: totalRecords }; let i = index">
+        <td scope="row">{{ customer.CustomerID }}</td>
+        <td>{{customer.CustomerName}}</td>
+        <td>{{customer.Email}}</td>
+        <td>{{customer.Phone}}</td>
+        <td>
+            
+                <button class="btn btn-primary" type="button" style="margin: 1%;" (click) = "updateCustomer(customer.CustomerID)">
+                  <i class="fas fa-pen"></i>
+                </button>
+                <button class="btn btn-danger" type="button" (click)= "deleteCustomer(customer.CustomerID)">
+                  <i class="fas fa-trash"></i>
+                </button>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+    <div class="text-right">
+      <pagination-controls id="pagination" (pageChange)="pageChanged($event)"></pagination-controls>
+  </div>
+
+</ng-template>

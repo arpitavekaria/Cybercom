@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 200px;
+    background-color: lightblue;
+    font-weight: bolder;
+    font-size: medium;
+}

@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<h2 style="text-align: center;">Dashboard</h2>
+  <hr>
+  <br>
+  <div *ngIf="showLoader else loaded" class="mt-5 text-center">
+    <img src="https://chickenrecipeseasy.top/images/loader.gif" />
+  </div>
+  <ng-template #loaded>
+  <!-- <table class="table table-hover" style="font-size: 13px;">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">No.Of Product</th>
+          <th scope="col">Today's Order</th>
+          <th scope="col">Quntity</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row">{{dashboard.NoOfProduct}} of products are available currently.</td>
+          <td>{{dashboard.TodayOrder}} of orders placed today.</td>
+          <td>{{dashboard.LessQuantity}} of products having less than 10 Qty.</td>
+        </tr>
+        
+      </tbody>
+    </table> -->
+    <div class="container">
+        <div class="box">
+            {{dashboard.NoOfProduct}} of products are available currently
+        </div>
+        <div class="box">
+            {{dashboard.TodayOrder}} of orders placed today.
+        </div>
+        <div class="box">
+            {{dashboard.LessQuantity}} of products having less than 10 Qty.
+        </div>
+    </div>
+    </ng-template>
+  

@@ -1,0 +1,102 @@
+<app-navbar></app-navbar>
+<!-- <ng-container *ngIf="isAddMode; then Add else update"></ng-container>
+        <ng-template #Add>
+          <h2 style="text-align: center;"> Customer Add</h2>
+        </ng-template>
+        <ng-template #update>
+          <h2 style="text-align: center;">Customer Edit</h2>
+        </ng-template>
+        <br/><hr/> -->
+<div class="row">
+  <div class="col-md-6 offset-3">
+    <form class="text-center border border-light p-5" [formGroup] = "customerForm" (ngSubmit)="onSubmit()">
+      <p class="h4 mb-4">Customer Details</p><hr/>
+
+
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Customer Name</h5>
+          </div>
+          <div class="col-md-8">
+            
+            <!-- Customer name -->
+            <input
+            type="text"
+            class="form-control mb-4"
+            placeholder="Enter Customer Name"
+            formControlName="CustomerName"
+          />
+          <div *ngIf="_form.CustomerName?.touched && _form.CustomerName?.invalid" class="alert alert-danger">
+                <div *ngIf="_form.CustomerName?.errors?.required">Please Enter Customer Name</div>
+          </div>
+            
+          </div>
+        </div>
+
+      
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Email Address</h5>
+          </div>
+          <div class="col-md-8">
+
+            <!-- E-mail -->
+            <input
+            type="text"
+            class="form-control mb-4"
+            placeholder="Enter E-mail"
+            formControlName="Email"
+          />
+          <div *ngIf="_form.Email?.touched && _form.Email?.invalid" class="alert alert-danger">
+            <div *ngIf="_form.Email?.errors?.required">Please Enter Email</div>
+          </div>
+          <div *ngIf="_form.Email?.errors?.pattern"  class="alert alert-danger"> Email should be in pattern. </div>
+            
+          </div>
+        </div>
+              
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Phone Number</h5>
+          </div>
+          <div class="col-md-8">
+              <!-- Phone number -->
+              <input
+              type="text"
+              class="form-control mb-4"
+              placeholder="Enter Phone number"
+              formControlName="Phone"  
+              />
+              <div *ngIf="_form.Phone?.touched && _form.Phone?.invalid" class="alert alert-danger">
+                <div *ngIf="_form.Phone?.errors?.required">Please Enter Phone</div>
+              </div>
+              <div *ngIf="_form.Phone?.errors?.pattern" class="alert alert-danger"> Phone number should be numeric and fix 10 digits</div>
+
+          </div>
+        </div>
+
+         
+        <button
+          class="btn btn-info my-4 btn-block waves-effect waves-light"
+          [disabled]="!customerForm.valid"
+          type="submit"
+        >
+        <ng-container *ngIf="isAddMode; then Add else update"></ng-container>
+        <ng-template #Add>
+          Add Customer
+        </ng-template>
+        <ng-template #update>
+          Update Customer
+        </ng-template>
+        </button>
+
+      <hr />
+
+    </form>
+        <button
+        class="btn btn-success my-4 btn-block waves-effect waves-light" routerLink="/customer"
+      >
+        Back to Customer List
+      </button>
+  </div>
+</div>

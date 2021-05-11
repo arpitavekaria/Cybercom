@@ -1,0 +1,80 @@
+<app-navbar></app-navbar>
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-12 mb-4 bg-light text-right">
+            <button type="button" class="btn btn-primary btn-lg" routerLink="/product/add">
+                <i class="fas fa-plus"></i>&nbsp;Add new Product</button>
+        </div>
+    </div>
+</div> -->
+<div *ngIf="showLoader else loaded" class="mt-5 text-center">
+  <img src="https://chickenrecipeseasy.top/images/loader.gif" />
+</div>
+<ng-template #loaded>
+
+  <h2 style="text-align: center;">Order List</h2>
+  <hr>
+  <br>
+
+  <div class="container"> 
+    <div class="row">
+        <div class="col-md-12 mb-4 bg-light text-right">
+          <form [formGroup]="searchForm" (ngSubmit)="searchOrder()">
+            <div class="row col-md-12">
+                <div class="form-group row mx-sm-3">
+                    <label for="fromDate" class="col-sm-4 col-form-label">From Date</label>
+                    <div class="col-sm-8">
+                        <input type="date" formControlName="FromDate" class="form-control" id="fromDate" placeholder="From date">
+                    </div>
+                </div>
+                <div class="form-group row mx-sm-3">
+                    <label for="toDate" class="col-sm-4 col-form-label">To Date</label>
+                    <div class="col-sm-8">
+                        <input type="date" formControlName="ToDate" class="form-control" id="toDate" placeholder="To date">
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary" [disabled]="!searchForm.valid">Search</button>
+                    <button type="reset" class="btn btn-danger" (click)="reset()">Cancle</button>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<table class="table table-hover" style="font-size: 13px;">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Customer Name</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Order Type Name</th>
+        <th scope="col" type="button" style="width: 100%;" (click)="ascDesc()">
+          Order Date <i class="fas fa-sort"></i>
+      </th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Total Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders | paginate: { id: 'pagination', itemsPerPage: itemsPerPage, currentPage: page,
+       totalItems: totalRecords }; let i=index">
+        <td scope="row">{{ order.OrderID }}</td>
+        <td>{{order.CustomerName}}</td>
+        <td>{{order.ProductName}}</td>
+        <td>{{order.OrderTypeName}}</td>
+        <td>{{order.OrderDate | date: 'dd/MM/yyyy' }}</td>
+        <td>{{order.Quantity}}</td>
+        <td>{{order.TotalPrice}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <!-- <div class="text-right">
+    <pagination-controls id="pagination" (pageChange)="page = $event"></pagination-controls>
+  </div> -->
+    <div class="text-right">
+      <pagination-controls id="pagination" (pageChange)="pageChanged($event)"></pagination-controls>
+  </div>
+  </ng-template>

@@ -1,0 +1,58 @@
+<app-navbar></app-navbar>
+<h2 style="text-align: center;">Product List</h2>
+  <hr>
+  <br>
+<div class="container">
+    <div class="row">
+      <!-- <div>
+        <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm">
+      </div> -->
+        <div class="col-md-12 mb-4 bg-light text-right">
+            <button type="button" class="btn btn-primary btn-lg" routerLink="/product/add">
+                <i class="fas fa-plus"></i>&nbsp;Add new Product</button>
+        </div>
+    </div>
+    <input type="text" class="form-control mb-4" id="ProductName" placeholder="Search Product Name" (keyup)="searchProduct($event)">
+</div>
+
+<div *ngIf="showLoader else loaded" class="mt-5 text-center">
+  <img src="https://chickenrecipeseasy.top/images/loader.gif" />
+</div>
+
+<ng-template #loaded> 
+<table class="table table-hover" style="font-size: 13px;">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Stock</th>
+        <th scope="col">Price</th>
+        <th scope="col">Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products | paginate: { id: 'pagination', itemsPerPage: itemsPerPage, 
+      currentPage: page, totalItems: totalRecords }; let i = index">
+        <td scope="row">{{ product.ProductID }}</td>
+        <td>{{product.ProductName}}</td>
+        <td>{{product.Stock}}</td>
+        <td>{{product.Price}}</td>
+        <td>
+            
+                <button class="btn btn-primary" type="button" style="margin: 1%;" (click) = "updateProduct(product.ProductID)">
+                  <i class="fas fa-pen"></i>
+                </button>
+                <button class="btn btn-danger" type="button" (click)= "deleteProduct(product.ProductID)">
+                  <i class="fas fa-trash"></i>
+                </button>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+    <div class="text-right">
+      <pagination-controls id="pagination" (pageChange)="pageChanged($event)"></pagination-controls>
+  </div>
+
+  </ng-template>
